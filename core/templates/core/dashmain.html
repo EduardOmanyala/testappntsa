@@ -1,0 +1,526 @@
+{% extends "core/base3.html" %}
+{% load static %}
+{% block content %}
+{% if not paydata%}
+<div>
+    <h6 class="joinbanner" style="background: linear-gradient(109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );">Gain Access to Hundreds of Test Questions!&nbsp;&nbsp;&nbsp; <a href="{% url 'make-a-payment' %}">Join Now</a></h6> 
+</div>
+{% endif %}
+<div>
+    <h6 class="joinbanner" style="background: linear-gradient(109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );">Test Categories</h6>  
+</div>
+
+
+
+
+<div class="mydashboardgridmain">
+    <div></div>
+    <div>
+
+       <!-- dashboard two coulum grid -->
+       <div class="mydashitems">
+        <!-- first div  -->
+            <div>
+
+
+        <!-- Test One -->
+        <div class="cardfgfdsg555" style="background-color: lightcyan">
+          <h4 class="mb-1"><a href="#exampleModalCenter" data-toggle="modal" data-target="#exampleModalCenter">Free NTSA Test One</a></h4>
+          {% if not test1 %}
+          <p>Practice Tests and </p>
+          <p>Revision Guides</p>
+          {% else %}
+          {% for row in test1 %}
+          {% if row.percentage < 60.00 %}
+          <span class="icon fa fa-check-circle fa-3x mb-1" style="color:red"></span>
+          {% else %}
+          <span class="icon fa fa-check-circle fa-3x mb-1" style="color:green"></span>
+          {% endif %}
+          <p class="mb-0 p-0 m-0">Score: {{row.percentage}}% &nbsp;&nbsp; <a href="#exampleModalCenter" data-toggle="modal" data-target="#exampleModalCenter">Retake?</a></p>
+          {% endfor %}
+          {% endif %}
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">NTSA Test One</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <ul>
+                  <li>Total Questions: 15</li>
+                  <li>Time Limit: Unlimited</li>
+                  <li>Max Score: 100%</li>
+                  <li>Score needed to Pass: 70%</li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="location.href='{% url 'category-questions' 1 %}'">Start Test</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- Modal -->
+      <!-- End of Test One -->
+      <!-- Test Three -->
+      <div title="unlock test" class="cardfgfdsg555" style="background-color: lightcyan">
+        <h4 class="mb-1"><a href="#test3ModalCenter" data-toggle="modal" data-target="#test3ModalCenter">Free NTSA Test Three</a></h4>
+      {% if not test3 %}
+      <p>Practice Tests and </p>
+      <p>Revision Guides</p>
+      {% else %}
+      {% for row in test3 %}
+      {% if row.percentage < 60.00 %}
+      <span class="icon fa fa-check-circle fa-3x mb-1" style="color:red"></span>
+      {% else %}
+      <span class="icon fa fa-check-circle fa-3x mb-1" style="color:green"></span>
+      {% endif %}
+      <p class="mb-0 p-0 m-0">Score: {{row.percentage}}% &nbsp;&nbsp; <a href="#test3ModalCenter" data-toggle="modal" data-target="#test3ModalCenter">Retake?</a></p>
+      {% endfor %}
+      {% endif %}
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="test3ModalCenter" tabindex="-1" role="dialog" aria-labelledby="test3ModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">NTSA Test Three</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li>Total Questions: 15</li>
+                <li>Time Limit: Unlimited</li>
+                <li>Max Score: 100%</li>
+                <li>Score needed to Pass: 70%</li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="location.href='{% url 'category-questions' 3 %}'">Start Test</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Modal -->
+    <!-- End of Test Three -->
+    <!-- Test Five -->
+    <div title="unlock test" class="cardfgfdsg555" style="background-color: lightcyan">
+      <h4 class="mb-1"><a href="#test5ModalCenter" data-toggle="modal" data-target="#test5ModalCenter">Free NTSA Test Five</a></h4>
+      {% if not test5 %}
+      {% if not paydata%}
+      <span class="icon fa fa-lock fa-2x mb-0" style="color:#E0FFFF"></span>
+      <p class="mb-0">Available on Premium Plan</p>
+      {% else %}
+      <p>Practice Tests and </p>
+      <p>Revision Guides</p>
+      {% endif %}
+    {% else %}
+    {% for row in test5 %}
+    {% if row.percentage < 60.00 %}
+    <span class="icon fa fa-check-circle fa-3x mb-1" style="color:red"></span>
+    {% else %}
+    <span class="icon fa fa-check-circle fa-3x mb-1" style="color:green"></span>
+    {% endif %}
+    <p class="mb-0 p-0 m-0">Score: {{row.percentage}}% &nbsp;&nbsp; <a href="#test5ModalCenter" data-toggle="modal" data-target="#test5ModalCenter">Retake?</a></p>
+    {% endfor %}
+    {% endif %}
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="test5ModalCenter" tabindex="-1" role="dialog" aria-labelledby="test5ModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">NTSA Test Five</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>Total Questions: 15</li>
+              <li>Time Limit: Unlimited</li>
+              <li>Max Score: 100%</li>
+              <li>Score needed to Pass: 70%</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="location.href='{% url 'category-questions' 5 %}'">Start Test</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- Modal -->
+  <!-- End of Test Five -->
+  <!-- Test Seven -->
+    <div title="unlock test" class="cardfgfdsg555" style="background-color: lightcyan">
+      <h4 class="mb-1"><a href="#test7ModalCenter" data-toggle="modal" data-target="#test7ModalCenter">Free NTSA Test Seven</a></h4>
+      {% if not test7 %}
+      {% if not paydata%}
+      <span class="icon fa fa-lock fa-2x mb-0" style="color:#E0FFFF"></span>
+      <p class="mb-0">Available on Premium Plan</p>
+      {% else %}
+      <p>Practice Tests and </p>
+      <p>Revision Guides</p>
+      {% endif %}
+      <br>
+    {% else %}
+    {% for row in test7 %}
+    {% if row.percentage < 60.00 %}
+      <span class="icon fa fa-check-circle fa-3x mb-1" style="color:red"></span>
+    {% else %}
+      <span class="icon fa fa-check-circle fa-3x mb-1" style="color:green"></span>
+    {% endif %}
+      <p class="mb-0 p-0 m-0">Score: {{row.percentage}}% &nbsp;&nbsp; <a href="#test7ModalCenter" data-toggle="modal" data-target="#test7ModalCenter">Retake?</a></p>
+    {% endfor %}
+    {% endif %}
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="test7ModalCenter" tabindex="-1" role="dialog" aria-labelledby="test7ModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">NTSA Test Seven</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>Total Questions: 15</li>
+              <li>Time Limit: Unlimited</li>
+              <li>Max Score: 100%</li>
+              <li>Score needed to Pass: 70%</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="location.href='{% url 'category-questions' 7 %}'">Start Test</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- Modal -->
+   <!-- End of Test Seven -->
+   <!-- Test Nine -->
+    <div title="unlock test" class="cardfgfdsg555" style="background-color: lightcyan">
+      <h4 class="mb-1"><a href="#test9ModalCenter" data-toggle="modal" data-target="#test9ModalCenter">Free NTSA Test Nine</a></h4>
+      {% if not test9 %}
+      {% if not paydata%}
+      <span class="icon fa fa-lock fa-2x mb-0" style="color:#E0FFFF"></span>
+      <p class="mb-0">Available on Premium Plan</p>
+      {% else %}
+      <p>Practice Tests and </p>
+      <p>Revision Guides</p>
+      {% endif %}
+    {% else %}
+    {% for row in test9 %}
+    {% if row.percentage < 60.00 %}
+    <span class="icon fa fa-check-circle fa-3x mb-1" style="color:red"></span>
+    {% else %}
+    <span class="icon fa fa-check-circle fa-3x mb-1" style="color:green"></span>
+    {% endif %}
+    <p class="mb-0 p-0 m-0">Score: {{row.percentage}}% &nbsp;&nbsp; <a href="#test9ModalCenter" data-toggle="modal" data-target="#test9ModalCenter">Retake?</a></p>
+    {% endfor %}
+    {% endif %}
+    </div>
+  <!-- Modal -->
+  <div class="modal fade" id="test9ModalCenter" tabindex="-1" role="dialog" aria-labelledby="test9ModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">NTSA Test Nine</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>Total Questions: 15</li>
+              <li>Time Limit: Unlimited</li>
+              <li>Max Score: 100%</li>
+              <li>Score needed to Pass: 70%</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="location.href='{% url 'category-questions' 9 %}'">Start Test</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- Modal -->
+      <!-- End of Test Nine -->
+
+
+
+
+
+       </div>
+        <!-- second div  -->
+       <div>
+         <!-- Test Two -->
+        <div title="unlock test" class="cardfgfdsg555" style="background-color: lightcyan">
+          <h4 class="mb-1"><a href="#test2ModalCenter" data-toggle="modal" data-target="#test2ModalCenter">Free NTSA Test Two</a></h4>
+        {% if not test2 %}
+        <p>Practice Tests and </p>
+        <p>Revision Guides</p>
+        {% else %}
+        {% for row in test2 %}
+        {% if row.percentage < 60.00 %}
+        <span class="icon fa fa-check-circle fa-3x mb-1" style="color:red"></span>
+        {% else %}
+        <span class="icon fa fa-check-circle fa-3x mb-1" style="color:green"></span>
+        {% endif %}
+        <p class="mb-0 p-0 m-0">Score: {{row.percentage}}% &nbsp;&nbsp; <a href="#test2ModalCenter" data-toggle="modal" data-target="#test2ModalCenter">Retake?</a></p>
+        {% endfor %}
+        {% endif %}
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="test2ModalCenter" tabindex="-1" role="dialog" aria-labelledby="test2ModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">NTSA Test Two</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <ul>
+                  <li>Total Questions: 15</li>
+                  <li>Time Limit: Unlimited</li>
+                  <li>Max Score: 100%</li>
+                  <li>Score needed to Pass: 70%</li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="location.href='{% url 'category-questions' 2 %}'">Start Test</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- Modal -->
+      <!-- End of Test Two -->
+      <!-- Test Four -->
+      <div title="unlock test" class="cardfgfdsg555" style="background-color: lightcyan">
+        <h4 class="mb-1"><a href="#test4ModalCenter" data-toggle="modal" data-target="#test4ModalCenter">Free NTSA Test Four</a></h4>
+      {% if not test4 %}
+      {% if not paydata%}
+        <span class="icon fa fa-lock fa-2x mb-0" style="color: black"></span>
+        <p class="mb-0">Available on Premium Plan</p>
+        {% else %}
+        <p>Practice Tests and </p>
+        <p>Revision Guides</p>
+        {% endif %}
+      {% else %}
+      {% for row in test4 %}
+      {% if row.percentage < 60.00 %}
+      <span class="icon fa fa-check-circle fa-3x mb-1" style="color:red"></span>
+      {% else %}
+      <span class="icon fa fa-check-circle fa-3x mb-1" style="color:green"></span>
+      {% endif %}
+      <p class="mb-0 p-0 m-0">Score: {{row.percentage}}% &nbsp;&nbsp; <a href="#test4ModalCenter" data-toggle="modal" data-target="#test4ModalCenter">Retake?</a></p>
+      {% endfor %}
+      {% endif %}
+      </div>
+      <div class="modal fade" id="test4ModalCenter" tabindex="-1" role="dialog" aria-labelledby="test4ModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">NTSA Test Four</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li>Total Questions: 15</li>
+                <li>Time Limit: Unlimited</li>
+                <li>Max Score: 100%</li>
+                <li>Score needed to Pass: 70%</li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="location.href='{% url 'category-questions' 4 %}'">Start Test</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Modal -->
+    <!-- End of Test four -->
+   <!-- Test Six -->
+    <div title="unlock test" class="cardfgfdsg555" style="background-color: lightcyan">
+      <h4 class="mb-1"><a href="#test6ModalCenter" data-toggle="modal" data-target="#test6ModalCenter">Free NTSA Test Six</a></h4>
+      {% if not test6 %}
+      {% if not paydata%}
+      <span class="icon fa fa-lock fa-2x mb-0" style="color:#E0FFFF"></span>
+      <p class="mb-0">Available on Premium Plan</p>
+      {% else %}
+      <p>Practice Tests and </p>
+      <p>Revision Guides</p>
+      {% endif %}
+    {% else %}
+    {% for row in test6 %}
+    {% if row.percentage < 60.00 %}
+    <span class="icon fa fa-check-circle fa-3x mb-1" style="color:red"></span>
+    {% else %}
+    <span class="icon fa fa-check-circle fa-3x mb-1" style="color:green"></span>
+    {% endif %}
+    <p class="mb-0 p-0 m-0">Score: {{row.percentage}}% &nbsp;&nbsp; <a href="#test6ModalCenter" data-toggle="modal" data-target="#test6ModalCenter">Retake?</a></p>
+    {% endfor %}
+    {% endif %}
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="test6ModalCenter" tabindex="-1" role="dialog" aria-labelledby="test6ModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">NTSA Test Six</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>Total Questions: 15</li>
+              <li>Time Limit: Unlimited</li>
+              <li>Max Score: 100%</li>
+              <li>Score needed to Pass: 70%</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="location.href='{% url 'category-questions' 6 %}'">Start Test</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- Modal -->
+  <!-- End of Test Six -->
+
+  <!-- Test Eight -->
+    <div title="unlock test" class="cardfgfdsg555" style="background-color: lightcyan">
+      <h4 class="mb-1"><a href="#test8ModalCenter" data-toggle="modal" data-target="#test8ModalCenter">Free NTSA Test Eight</a></h4>
+      {% if not test8 %}
+      {% if not paydata%}
+      <span class="icon fa fa-lock fa-2x mb-0" style="color:#E0FFFF"></span>
+      <p class="mb-0">Available on Premium Plan</p>
+      {% else %}
+      <p>Practice Tests and </p>
+      <p>Revision Guides</p>
+      {% endif %}
+    {% else %}
+    {% for row in test8 %}
+
+    {% if row.percentage < 60.00 %}
+    <span class="icon fa fa-check-circle fa-3x mb-1" style="color:red"></span>
+    {% else %}
+    <span class="icon fa fa-check-circle fa-3x mb-1" style="color:green"></span>
+    {% endif %}
+    
+    <p class="mb-0 p-0 m-0">Score: {{row.percentage}}% &nbsp;&nbsp; <a href="#test8ModalCenter" data-toggle="modal" data-target="#test8ModalCenter">Retake?</a></p>
+    {% endfor %}
+    {% endif %}
+    </div>
+  <!-- Modal -->
+  <div class="modal fade" id="test8ModalCenter" tabindex="-1" role="dialog" aria-labelledby="test8ModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">NTSA Test Eight</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>Total Questions: 15</li>
+              <li>Time Limit: Unlimited</li>
+              <li>Max Score: 100%</li>
+              <li>Score needed to Pass: 70%</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="location.href='{% url 'category-questions' 8 %}'">Start Test</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- Modal -->
+  <!-- End of Test Eight -->
+
+  <!-- Test Ten -->
+    <div title="unlock test" class="cardfgfdsg555" style="background-color: lightcyan">
+      <h4 class="mb-1"><a href="#test10ModalCenter" data-toggle="modal" data-target="#test10ModalCenter">Free NTSA Test Ten</a></h4>
+      {% if not test10 %}
+      {% if not paydata%}
+      <span class="icon fa fa-lock fa-2x mb-0" style="color:#E0FFFF"></span>
+      <p class="mb-0">Available on Premium Plan</p>
+      {% else %}
+      <p>Practice Tests and </p>
+      <p>Revision Guides</p>
+      {% endif %}
+    {% else %}
+    {% for row in test10 %}
+    {% if row.percentage < 60.00 %}
+    <span class="icon fa fa-check-circle fa-3x mb-1" style="color:red"></span>
+    {% else %}
+    <span class="icon fa fa-check-circle fa-3x mb-1" style="color:green"></span>
+    {% endif %}
+    <p class="mb-0 p-0 m-0">Score: {{row.percentage}}% &nbsp;&nbsp; <a href="#test10ModalCenter" data-toggle="modal" data-target="#test10ModalCenter">Retake?</a></p>
+    {% endfor %}
+    {% endif %}
+    </div>
+  <!-- Modal -->
+  <div class="modal fade" id="test10ModalCenter" tabindex="-1" role="dialog" aria-labelledby="test10ModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">NTSA Test Ten</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>Total Questions: 15</li>
+              <li>Time Limit: Unlimited</li>
+              <li>Max Score: 100%</li>
+              <li>Score needed to Pass: 70%</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="location.href='{% url 'category-questions' 10 %}'">Start Test</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- Modal -->
+    <!-- End of Test Ten -->
+
+
+       </div>
+     </div>
+
+
+        
+    </div>
+    <div></div>
+</div>
+
+{% endblock %}
+  

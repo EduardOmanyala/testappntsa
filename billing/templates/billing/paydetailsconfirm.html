@@ -1,0 +1,32 @@
+{% extends "core/base3.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid" style="background: linear-gradient(109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1%);">
+  <div class="billingdispcol">
+  <div></div>
+  <div>
+      <div class="plan-selector12">
+        <br>
+        <h6>Please Confirm if this is still your MPESA Number</h6>
+        <br><br>
+            {% for row in mydata %}
+            <h5 class="article-title" style="color:#1e90ff;">{{ row.phonenumber }}</h5>
+            {% endfor %}
+            <br>
+            <h6> if yes, Click Here to Proceed,  </h6>
+            <br>
+            <button type="button" onclick="location.href='{% url 'paymentroute' %}'" class="btn3 btn btn-primary btn-lg">Continue</button>
+
+          <br><br>
+          <h6> or enter a new MPESA number here </h6>
+           <br>
+            <button type="button" onclick="location.href='{% url 'post-update' numpk %}'" class="btn3 btn btn-primary btn-lg">Change Number</button>
+            <br><br><br>
+      </div>
+   
+  </div>
+    <div></div>
+  </div>    
+  </div>
+
+{% endblock %}

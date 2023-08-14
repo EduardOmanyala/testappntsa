@@ -1,0 +1,31 @@
+{% extends "core/base3.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid" style="background: linear-gradient(109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1%);">
+  <div class="billingdispcol">
+  <div></div>
+  <div>
+      <div class="plan-selector12">
+        <br>
+        <h6>This is the Mobile Number we will use to process your Payment</h6>
+        <br><br>
+        <h2 class="article-title" style="color:#1e90ff;">{{ object.phonenumber }}</h2>
+        <br><br>
+
+        {% if object.user == user %}
+
+        <button type="button" onclick="location.href='{% url 'paymentroute' %}'" class="btn3 btn btn-primary">Continue</button>
+
+      <br><br>
+
+        <button type="button" onclick="location.href='{% url 'post-update' object.id %}'" class="btn3 btn btn-primary">Edit Number</button>
+        <br><br><br>
+
+    {% endif %}
+      </div>
+   
+  </div>
+    <div></div>
+  </div>    
+  </div>
+{% endblock %}

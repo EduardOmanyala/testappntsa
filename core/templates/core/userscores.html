@@ -1,0 +1,45 @@
+{% extends "core/base3.html" %}
+{% load static %}
+{% block content %}
+    <div class="results">
+        <div></div> 
+        <div>
+           
+            <h5 class="my-4 element-selector12">Overall Results</h5>
+        <div class="card-body">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Subject</th>
+                    <th>Percentage</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in myresults %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{row.subject}}</td> 
+                    {% if row.percentage < 60.00 %}
+                    <td class="bg-danger text-white">{{row.percentage|floatformat:2}}% - Failed</td>
+                    {% else %}
+                    <td class="bg-success text-white">{{row.percentage|floatformat:2}}% - Passed</td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+            </table>
+        </div>
+        </div> 
+        <div></div>
+    </div>
+
+
+    
+
+
+
+
+
+    
+{% endblock content %}

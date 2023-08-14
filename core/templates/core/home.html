@@ -1,0 +1,264 @@
+{% extends "core/base3.html" %}
+{% load static %}
+{% block content %}
+
+      <!-- Swiper-->
+      <p class="mb-4">This is for ntsa Only</p>
+      <section class="section swiper-container swiper-slider swiper-slider-corporate swiper-pagination-style-2" data-loop="true" data-autoplay="5000" data-simulate-touch="true" data-nav="false" data-direction="vertical">
+        <div class="swiper-wrapper text-left">
+          <div class="swiper-slide context-dark" data-slide-bg="{% static 'core/images3/drivertwo.jpg' %}">
+            <div class="swiper-slide-caption section-md">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-10">
+                    <h6 class="text-uppercase" data-caption-animate="fadeInRight" data-caption-delay="0">Get all the possible test questions you may face in the exam</h6>
+                    <h2 class="oh font-weight-light" data-caption-animate="slideInUp" data-caption-delay="100"><span>Get</span><span class="font-weight-bold"> Your License</span></h2><a class="button button-default-outline button-ujarak" href="{% url 'dashboard' %}" data-caption-animate="fadeInLeft" data-caption-delay="0">Get Started</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide context-dark" data-slide-bg="{% static 'core/images3/traffic.jpg' %}">
+            <div class="swiper-slide-caption section-md">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-10">
+                    <h6 class="text-uppercase" data-caption-animate="fadeInRight" data-caption-delay="0">Jumpstart your career as a porffesional driver</h6>
+                    <h2 class="oh font-weight-light" data-caption-animate="slideInUp" data-caption-delay="100"><span>Trust</span><span class="font-weight-bold"> Our Experience</span></h2><a class="button button-default-outline button-ujarak" href="{% url 'dashboard' %}" data-caption-animate="fadeInLeft" data-caption-delay="0">Get Started</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide context-dark" data-slide-bg="{% static 'core/images3/driverone.jpg' %}">
+            <div class="swiper-slide-caption section-md">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-10">
+                    <h6 class="text-uppercase" data-caption-animate="fadeInRight" data-caption-delay="0">Pass your driver test in one attempt</h6>
+                    <h2 class="oh font-weight-light" data-caption-animate="slideInUp" data-caption-delay="100"><span>See</span><span class="font-weight-bold"> Possible Questions</span></h2><a class="button button-default-outline button-ujarak" href="{% url 'dashboard' %}" data-caption-animate="fadeInLeft" data-caption-delay="0">Get Started</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Swiper Pagination-->
+        <div class="swiper-pagination"></div>
+      </section>
+      <!-- Section Box Categories-->
+      <section class="section section-lg section-top-1 bg-gray-4">
+        <div class="container offset-negative-1">
+          <div class="box-categories cta-box-wrap">
+            <div class="box-categories-content">
+              <div class="row justify-content-center">
+                <div class="col-md-4 wow fadeInDown col-9" data-wow-delay=".2s">
+                  <ul class="list-marked-2 box-categories-list">
+                    <li><a href="{% url 'dashboard' %}"><img src="{% static 'core/images2/revision3.jpg' %}" alt="" width="368" height="420"/></a>
+                      <h5 class="box-categories-title">Revision Guides</h5>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-4 wow fadeInDown col-9" data-wow-delay=".2s">
+                  <ul class="list-marked-2 box-categories-list">
+                    <li><a href="{% url 'dashboard' %}"><img src="{% static 'core/images2/pastpapers6.jpg' %}" alt="" width="368" height="420"/></a>
+                      <h5 class="box-categories-title">Study Questions</h5>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-4 wow fadeInDown col-9" data-wow-delay=".2s">
+                  <ul class="list-marked-2 box-categories-list">
+                    <li><a href="{% url 'dashboard' %}"><img src="{% static 'core/images2/coaching1.jpg' %}" alt="" width="368" height="420"/></a>
+                      <h5 class="box-categories-title">Personalized Coaching</h5>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+         
+      </section>
+      <!-- Discover New Horizons-->
+      <section class="section section-sm section-first bg-default text-md-left">
+        <div class="container">
+          <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+            <div class="col-lg-6 text-center wow fadeInUp"><img src="{% static 'core/images3/bus.jpg' %}" alt="" width="556" height="382"/>
+            </div>
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay=".1s">
+              <div class="box-width-lg-470">
+                <h3>Discover New Horizons</h3>
+                <!-- Bootstrap tabs-->
+                <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big tabs-line-style-2 text-center text-md-left" id="tabs-7">
+                  <!-- Nav tabs-->
+                  <ul class="nav nav-tabs">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#tabs-7-1" data-toggle="tab">About us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-7-2" data-toggle="tab">Why choose us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-7-3" data-toggle="tab">Our mission</a></li>
+                  </ul>
+                  <!-- Tab panes-->
+                  <div class="tab-content">
+                    <div class="tab-pane fade show active" id="tabs-7-1">
+                      <p>Test Prep is committed to bringing our clients the best in value and quality in exam preparation. We are passionate about academics and giving our clients the skills they need to excel.</p>
+                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="#">Get in Touch</a><a class="button button-black-outline button-md" href="#">Read More</a></div>
+                    </div>
+                    <div class="tab-pane fade" id="tabs-7-2">
+                      <p>We are proud to offer excellent quality and value for money in our platform, which give you the chance to ace your test and get your license.</p>
+                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="#">Get in Touch</a><a class="button button-black-outline button-md" href="#">Read More</a></div>
+                    </div>
+                    <div class="tab-pane fade" id="tabs-7-3">
+                      <p>Our mission is to provide the ultimate test preparation platform while becoming a one-stop shop for revision material and guide needed by our students.</p>
+                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="#">Get in Touch</a><a class="button button-black-outline button-md" href="#">Read More</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--	Our Services-->
+      <section class="section section-sm">
+        <div class="container">
+          <h3>Our Services</h3>
+          <div class="row row-30">
+            <div class="col-sm-6 col-lg-4">
+              <article class="box-icon-classic">
+                <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
+                  <div class="unit-left">
+                    <div class="box-icon-classic-icon fl-bigmug-line-equalization3"></div>
+                  </div>
+                  <div class="unit-body">
+                    <h5 class="box-icon-classic-title"><a href="{% url 'dashboard' %}">Test Questions</a></h5>
+                    <p class="box-icon-classic-text">Get hundreds of possible test questions you may be asked in a real exam</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+              <article class="box-icon-classic">
+                <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
+                  <div class="unit-left">
+                    <div class="box-icon-classic-icon fl-bigmug-line-circular220"></div>
+                  </div>
+                  <div class="unit-body">
+                    <h5 class="box-icon-classic-title"><a href="{% url 'dashboard' %}">Revision Guides</a></h5>
+                    <p class="box-icon-classic-text">Our revision guides will help you identify key focus areas that are more likely to be examined.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+              <article class="box-icon-classic">
+                <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
+                  <div class="unit-left">
+                    <div class="box-icon-classic-icon fl-bigmug-line-favourites5"></div>
+                  </div>
+                  <div class="unit-body">
+                    <h5 class="box-icon-classic-title"><a href="{% url 'dashboard' %}">Highly Qualified Service</a></h5>
+                    <p class="box-icon-classic-text">Our test guides are qualified, skilled, and friendly to bring you the best service.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+              <article class="box-icon-classic">
+                <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
+                  <div class="unit-left">
+                    <div class="box-icon-classic-icon fl-bigmug-line-headphones32"></div>
+                  </div>
+                  <div class="unit-body">
+                    <h5 class="box-icon-classic-title"><a href="{% url 'dashboard' %}">24/7 Support</a></h5>
+                    <p class="box-icon-classic-text">You can always get professional support from our staff 24/7 and ask any question you have.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+              <article class="box-icon-classic">
+                <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
+                  <div class="unit-left">
+                    <div class="box-icon-classic-icon fl-bigmug-line-hot67"></div>
+                  </div>
+                  <div class="unit-body">
+                    <h5 class="box-icon-classic-title"><a href="{% url 'dashboard' %}">Handpicked Testguides</a></h5>
+                    <p class="box-icon-classic-text">Our team offers only the best selection of highly likely test questions to our clients.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+              <article class="box-icon-classic">
+                <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
+                  <div class="unit-left">
+                    <div class="box-icon-classic-icon fl-bigmug-line-wallet26"></div>
+                  </div>
+                  <div class="unit-body">
+                    <h5 class="box-icon-classic-title"><a href="{% url 'dashboard' %}">Best Price Guarantee</a></h5>
+                    <p class="box-icon-classic-text">Low cost access to as many questions as you can handle.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Hot tours-->
+      <section class="section section-sm bg-default">
+        <div class="container">
+          <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">User Plans</span></h3>
+          <div class="row row-sm row-40 row-md-50">
+            <div class="col-sm-6 col-md-12 wow fadeInRight">
+              <!-- Product Big-->
+              <article class="product-big">
+                <div class="unit flex-column flex-md-row align-items-md-stretch">
+                  <div class="unit-left"><a class="product-big-figure" href="#"><img src="{% static 'core/images2/students4.jpg' %}" alt="" width="600" height="366"/></a></div>
+                  <div class="unit-body">
+                    <div class="product-big-body">
+                      <h5 class="product-big-title"><a href="#">Limited User Plan</a></h5>
+                      <div class="group-sm group-middle justify-content-start">
+                        <div class="product-big-rating"><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star_half"></span></div><a class="product-big-reviews" href="#">4 customer reviews</a>
+                      </div>
+                      <p class="product-big-text">Get access to a limited number of possible test questions that can help you understand what topics are usually tested</p><a class="button button-black-outline button-ujarak" href="{% url 'pricing' %}">Get this Plan</a>
+                      <div class="product-big-price-wrap"><span class="product-big-price">Free</span></div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-md-12 wow fadeInLeft">
+              <!-- Product Big-->
+              <article class="product-big">
+                <div class="unit flex-column flex-md-row align-items-md-stretch">
+                  <div class="unit-left"><a class="product-big-figure" href="#"><img src="{% static 'core/images2/students5.jpg' %}" alt="" width="600" height="366"/></a></div>
+                  <div class="unit-body">
+                    <div class="product-big-body">
+                      <h5 class="product-big-title"><a href="#">Premium User Plan</a></h5>
+                      <div class="group-sm group-middle justify-content-start">
+                        <div class="product-big-rating"><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star_half"></span></div><a class="product-big-reviews" href="#">5 customer reviews</a>
+                      </div>
+                      <p class="product-big-text">Get access to an unlimited number of questions that will enable you to unbderstand all possible test areas that may be examined.</p><a class="button button-black-outline button-ujarak" href="{% url 'pricing' %}">Get this Plan</a>
+                      <div class="product-big-price-wrap"><span class="product-big-price">KEs400</span></div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Different People-->
+      
+      <!-- Section Subscribe-->
+      <section class="section bg-default text-center offset-top-50">
+        <div class="parallax-container" data-parallax-img="{% static 'core/images2/graduation3.jpg' %}">
+          <div class="parallax-content section-xl section-inset-custom-1 context-dark bg-overlay-2-21">
+            <div class="container">
+              <h2 class="heading-2 oh font-weight-normal wow slideInDown"><span class="d-block font-weight-semi-bold">Hundreds of Test Questions</span><span class="d-block font-weight-light">are Waiting for You!</span></h2>
+              <p class="text-width-medium text-spacing-75 wow fadeInLeft" data-wow-delay=".1s">Our platform offers students the best possible revision materials that significantly increases their chances of passing their exams!</p><a class="button button-secondary button-pipaluk" href="{% url 'dashboard' %}">Get Started Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--	Instagrram wondertour-->
+
+{% endblock %}
+  

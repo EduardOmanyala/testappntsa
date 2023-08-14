@@ -1,0 +1,61 @@
+{% extends "core/base3.html" %}
+{% load static %}
+{% block content %}
+{% if not paydata%}
+<div>
+    <h6 class="joinbanner" style="background: linear-gradient(109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );">Gain Access to Hundreds of Test Questions!&nbsp;&nbsp;&nbsp; <a href="{% url 'make-a-payment' %}">Join Now</a></h6> 
+</div>
+{% endif %}
+<div>
+    <h6 class="joinbanner" style="background: linear-gradient(109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );">Test Categories</h6>  
+</div>
+
+
+
+
+<div class="crazxydiv123">
+    <div></div>
+    <div>
+
+        <div class="fdgvdsf44223ghj">
+            <div class="row4545hhh">
+              {% for category in freetest %}
+                <div class="columnmhjghg675">
+                  
+                  <div title="unlock test" class="cardfgfdsg555" style="background-color: lightcyan">
+                    
+                    <h4><a href="{% url 'category-questions' category.id %}" >Free {{category.heading}}</a></h4>
+                    <p>Practice Tests and </p>
+                    <p>Revision Guides</p>  
+                   
+                  </div>
+                </div>
+                {% endfor %}
+                {% for category in data %}
+                <div class="columnmhjghg675">
+                  
+                  <div class="cardfgfdsg555" style="background-color: lightskyblue">
+                    {% if not paydata%}
+                    <h4 class="mb-2" > <a href="{% url 'make-a-payment' %}" >{{category.heading}}</a></h4>
+                    <span class="icon fa fa-lock fa-2x mb-0" style="color:#E0FFFF"></span>
+                    <p class="mb-0">Available on Premium Plan</p>
+                    {% else %}
+                    <h4 class="mb-2" > <a href="{% url 'category-questions' category.id %}" >{{category.heading}}</a></h4>
+                    <p>Practice Tests and </p>
+                    <p>Revision Guides</p>
+                    {% endif %}
+                   
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+        </div>
+
+
+        
+    </div>
+    <div></div>
+</div>
+
+{% endblock %}
+  

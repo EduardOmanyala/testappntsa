@@ -1,0 +1,36 @@
+{% extends "core/base3.html" %}
+{% load static %}
+{% block content %}
+<div>
+    <h2>Test Categories</h2>
+</div>
+
+
+<div class="crazxydiv123">
+  <div></div>
+  <div>
+
+      <div class="fdgvdsf44223ghj">
+          <div class="row4545hhh">
+            {% for category in data %}
+              <div class="columnmhjghg675">
+                <div class="cardfgfdsg555">
+                  <h3><a href="{% url 'category-questions' category.id %}">{{category.title}}</a></h3>
+                  <p>Practice Tests and </p>
+                  <p>Revision Guides</p>
+                </div>
+              </div>
+              {% endfor %}
+              
+            </div>
+      </div>
+
+
+
+      
+  </div>
+  <div></div>
+</div>
+         
+    
+{% endblock content %}

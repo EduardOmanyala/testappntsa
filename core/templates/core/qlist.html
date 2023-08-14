@@ -1,0 +1,47 @@
+{% extends "core/formbase.html" %}
+{% load static %}
+{% block content %}
+
+
+
+    <div class="forsubans">
+      <div class="questioimgdiv">
+        <div></div>
+        <div>
+          {% if question.questionimage %}
+          <p style="text-align:center;">Consider the image below:</p>
+          {% endif %}
+        <div class="imgdivq">
+            {% if question.questionimage %}
+            <img src="{{ question.questionimage.url }}" alt="Loading Image">
+            {% endif %}
+        </div>
+      </div>
+        <div></div>
+      </div>
+      
+    <form class="formans123" method="post" action="{% url 'submit-answer' category.id question.id %}">
+        {% csrf_token %}
+        <h4>{{question.question}}</h4>
+        <div class="inputGroup123">
+          <input value="{{question.opt_1}}" id="option_1" name="answer" type="radio"/>
+          <label for="option_1">A) {{question.opt_1}}</label>
+        </div>
+        <div class="inputGroup123">
+            <input value="{{question.opt_2}}" id="option_2" name="answer" type="radio"/>
+            <label for="option_2">B) {{question.opt_2}}</label>
+          </div>
+          <div class="inputGroup123">
+            <input value="{{question.opt_3}}" id="option_3" name="answer" type="radio"/>
+            <label for="option_3">C) {{question.opt_3}}</label>
+          </div>
+          <div class="inputGroup123">
+            <input value="{{question.opt_4}}" id="option_4" name="answer" type="radio"/>
+            <label for="option_4">D) {{question.opt_4}}</label>
+          </div>
+          <div>
+            <button class="button12ans" type="submit" name="submit" value="submit">Submit</button>
+          </div>
+      </form>
+    </div>
+    {% endblock %}

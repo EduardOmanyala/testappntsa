@@ -1,0 +1,24 @@
+{% extends "core/base3.html" %}
+{% load static %}
+{% block content %}
+<div>
+    <h2>Test Categories</h2>
+</div>
+
+<div class="crazxydiv">
+    <div></div>
+    <div>
+        {%for element in listDict%}
+        <h6>{{ element.product }} - {{ element.price }}</h6>
+        {% endfor %}
+
+      
+  
+        
+    </div>
+    <div></div>
+</div>
+  
+         
+    
+{% endblock content %}

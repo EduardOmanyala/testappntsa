@@ -1,0 +1,1352 @@
+[
+    {
+      "model": "core.QuizQuestion",
+      "pk": 1,
+      "fields": {
+        "category": 1,
+        "question": "What are Dim Lights?",
+        "opt_1":"Lights that are to be used at all times, as one should not risk blinding other drivers",
+        "opt_2":"Lights which are switched on when it is getting dark. They are also switched on for a short distance viewing of oncoming vehicles",
+        "opt_3":"Lights found inside the vehicle cabin that serve those inside the vehicle",
+        "opt_4":"Lights that are used to indicate one's intention to turn",
+        "opt_5":"",
+        "opt_6":"",
+        "opt_7":"",
+        "right_opt":"Lights which are switched on when it is getting dark. They are also switched on for a short distance viewing of oncoming vehicles"
+      }
+    },
+    {
+        "model": "core.QuizQuestion",
+        "pk": 2,
+        "fields": {
+          "category": 1,
+          "question": "What are parking dim lights?",
+          "opt_1":"Lights that are turned on when a vehicle is at a stop",
+          "opt_2":"Lights that indicates one's intention to park their vehicle",
+          "opt_3":"Lights used in low visibility conditions where a lot of light is necessary",
+          "opt_4":"Lights that are switched on at 6: 45 AM or when it is raining or dusty.",
+          "opt_5":"",
+          "opt_6":"",
+          "opt_7":"",
+          "right_opt":"Lights that are switched on at 6: 45 AM or when it is raining or dusty."
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 3,
+        "fields": {
+          "category": 1,
+          "question": "What are full lights?",
+          "opt_1":"Lights used in at night",
+          "opt_2":"Lights used on highways to enable the driver see further",
+          "opt_3":"Lights that are to be used at all times irrespective of the environmental conditions",
+          "opt_4":"Lights that are used to indicate one's intention to turn",
+          "opt_5":"",
+          "opt_6":"",
+          "opt_7":"",
+          "right_opt":"Lights used on highways to enable the driver see further"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 4,
+        "fields": {
+          "category": 1,
+          "question": "What are hazard lights?",
+          "opt_1":"These are vehicle lights that flash at the front and back of the car. They are switched on when they is a hazard or danger.",
+          "opt_2":"Hazard lights are used to indicate that one needs to stop immediately",
+          "opt_3":"They can also be used when overtaking at high speed",
+          "opt_4":"They can best be used at night when visibility is high",
+          "opt_5":"",
+          "opt_6":"",
+          "opt_7":"",
+          "right_opt":"These are vehicle lights that flash at the front and back of the car. They are switched on when they is a hazard or danger."
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 5,
+        "fields": {
+          "category": 1,
+          "question": "What are Indicator lights?",
+          "opt_1":"Lights used to signal other drivers of one's intention to stop",
+          "opt_2":"Lights that turn on automatically when one applies the brakes",
+          "opt_3":"Lights that are only used when its necessary to alert other drivers that one is turning",
+          "opt_4":"Lights that are used to provide signals to other users when changing lanes, reversing and parking.",
+          "opt_5":"",
+          "opt_6":"",
+          "opt_7":"",
+          "right_opt":"Lights that are used to provide signals to other users when changing lanes, reversing and parking."
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 6,
+        "fields": {
+          "category": 1,
+          "question": "What are brake lights?",
+          "opt_1":"Lights that are only used when its necessary to alert other drivers that one is turning",
+          "opt_2":"These are lights that indicate the vehicle is applying brakes.",
+          "opt_3":"Lights that generally indicate danger",
+          "opt_4":"Lights that are only used in low visibility conditions",
+          "opt_5":"",
+          "opt_6":"",
+          "opt_7":"",
+          "right_opt":"These are lights that indicate the vehicle is applying brakes."
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 7,
+        "fields": {
+          "category": 1,
+          "question": "When can you turn on the lights during day time?",
+          "opt_1":"When its foggy",
+          "opt_2":"During heavy rainfall",
+          "opt_3":"When its misty",
+          "opt_4":"During emergency",
+          "opt_5":"In all the above situations",
+          "opt_6":"",
+          "opt_7":"",
+          "right_opt":"In all the above situations"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 8,
+        "fields": {
+          "category": 1,
+          "question": "What is a vehicle?",
+          "opt_1":"A four wheeled machine used for transportation",
+          "opt_2":"A form of transportation",
+          "opt_3":"A type of industrial machine",
+          "opt_4":"An automobile power driven machine",
+          "right_opt":"an automobile power driven machine"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 9,
+        "fields": {
+          "category": 1,
+          "question": "What is a lane?",
+          "opt_1":"A path used by pedestrians",
+          "opt_2":"Is a type of road",
+          "opt_3":"It is a path to be followed by the vehicle",
+          "opt_4":"Is a road made of tarmac",
+          "right_opt":"It is a path to be followed by the vehicle"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 10,
+        "fields": {
+          "category": 1,
+          "question": "Who is a pedestrian?",
+          "opt_1":"Any road user",
+          "opt_2":"A motorcylce rider",
+          "opt_3":"A person who does not own a car",
+          "opt_4":"Road users on foot",
+          "right_opt":"Road users on foot"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 11,
+        "fields": {
+          "category": 1,
+          "question": "Kenyan drivers are supposed to drive on which side of the road?",
+          "opt_1":"Always keep left unless overtaking",
+          "opt_2":"Always keep right unless overtaking ",
+          "opt_3":"Drivers are free to switch to their preffered side",
+          "opt_4":"None of the above is correct",
+          "right_opt":"Always keep left unless overtaking"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 12,
+        "fields": {
+          "category": 1,
+          "question": "Which side do you overtake from in Kenya?",
+          "opt_1":"From the left side",
+          "opt_2":"From the right side",
+          "opt_3":"From any side, depending on traffic conditions",
+          "opt_4":"All the above are true",
+          "right_opt":"From the right side"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 13,
+        "fields": {
+          "category": 1,
+          "question": "Which one of the following is NOT one of the three documents which must be valid before you are allowed to drive?",
+          "opt_1":"Valid driving license",
+          "opt_2":"Valid Identification Card",
+          "opt_3":"Valid insurance certificate",
+          "opt_4":"Valid vehicle inspection certificate",
+          "right_opt":"Valid Identification Card"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 14,
+        "fields": {
+          "category": 1,
+          "question": "Which category of vehicles do NOT have a right of way?",
+          "opt_1":"Ambulance with siren",
+          "opt_2":"Fire engine with a siren",
+          "opt_3":"Public Service Vehicles",
+          "opt_4":"Presidential escort with siren",
+          "opt_5":"Police car with a siren",
+          "right_opt":"Public Service Vehicles"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 15,
+        "fields": {
+          "category": 1,
+          "question": "What is the maximum driving speed limit in town?",
+          "opt_1":"50Km/h",
+          "opt_2":"80Km/h",
+          "opt_3":"70Km/h",
+          "opt_4":"100Km/h",
+          "right_opt":"50Km/h"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 16,
+        "fields": {
+          "category": 7,
+          "question": "Which of the following maximum speed limits is NOT legal when applied on a highway?",
+          "opt_1":"Cars - 110Km/h",
+          "opt_2":"Pickups/lorries - 80Km/h",
+          "opt_3":"Motorcycles - 50Km/h",
+          "opt_4":"Trailers  - 65Km/h",
+          "right_opt":"Motorcycles - 50Km/h"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 17,
+        "fields": {
+          "category": 7,
+          "question": "When are you not allowed to drive despite having the three valid required documents?",
+          "opt_1":"When medicated",
+          "opt_2":"When you are sick",
+          "opt_3":"Drunk",
+          "opt_4":"In all the above situations",
+          "right_opt":"In all the above situations"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 18,
+        "fields": {
+          "category": 7,
+          "question": "What is the Highway Code?",
+          "opt_1":"The highway code is a booklet that records all traffic violations a driver makes",
+          "opt_2":"Highway code is a booklet checked and passed by the parliament for rules of road users in Kenya",
+          "opt_3":"The highway code is part of one's drivers license",
+          "opt_4":"Includes laws put in place by traffic officers to control vehicle flow",
+          "right_opt":"Highway code is a booklet checked and passed by the parliament for rules of road users in Kenya"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 19,
+        "fields": {
+          "category": 7,
+          "question": "What do you look for when driving past stationery vehicle?",
+          "opt_1":"Opening of doors",
+          "opt_2":"Pedestrian crossing",
+          "opt_3":"Oncoming traffic",
+          "opt_4":"Option A & B",
+          "right_opt":"Option A & B"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 20,
+        "fields": {
+          "category": 7,
+          "question": "Which one of the following is NOT one of the four important tools you must carry when driving for a safari?",
+          "opt_1":"Car jack",
+          "opt_2":"Spare wheel",
+          "opt_3":"Spot light",
+          "opt_4":"Reflective triangle",
+          "right_opt":"Reflective triangle"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 21,
+        "fields": {
+          "category": 7,
+          "question": "The following are the four main causes of accidents in Kenya, EXCEPT?.",
+          "opt_1":"Carelessness",
+          "opt_2":"Lane violations",
+          "opt_3":"Over-speeding",
+          "opt_4":"Drunkenness",
+          "opt_5":"Overloading",
+          "right_opt":"Lane violations"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 22,
+        "fields": {
+          "category": 7,
+          "question": "How many wheels does a saloon car have?",
+          "opt_1":"Four",
+          "opt_2":"Six",
+          "opt_3":"Five",
+          "opt_4":"Eight",
+          "right_opt":"Five"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 23,
+        "fields": {
+          "category": 7,
+          "question": "How many eyes does a driver have?",
+          "opt_1":"Three - two natural and one artificial",
+          "opt_2":"Two, as they are only human",
+          "opt_3":"Four - two natural and two artificial",
+          "opt_4":"One - as they only focus on one direction",
+          "right_opt":"Three - two natural and one artificial"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 24,
+        "fields": {
+          "category": 7,
+          "question": "What should you do first when receiving your driving license for the first time?",
+          "opt_1":"Laminate and place on your dashboard",
+          "opt_2":"You can start driving immediately",
+          "opt_3":"Check all the details are correct and sign in ink pen",
+          "opt_4":"Use it as a form of identification in place of your ID",
+          "right_opt":"Check all the details are correct and sign in ink pen"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 25,
+        "fields": {
+          "category": 7,
+          "question": "When there is a white continuous line down a one way traffic road what does it mean?",
+          "opt_1":"Ensures that all lanes on the road are visible",
+          "opt_2":"It means no changing lane",
+          "opt_3":"It means the road may have a lot of traffic, meaning it is important to observe lane discipline",
+          "opt_4":"Its just a decoration used on tarmac roads",
+          "right_opt":"It means no changing lane"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 26,
+        "fields": {
+          "category": 7,
+          "question": "Within what period should an accident be reported at a police station?",
+          "opt_1":"Within five hours after the incident",
+          "opt_2":"Within a week after the incident",
+          "opt_3":"Only reported when there is is serious damage or harm",
+          "opt_4":"As soon as possible but within 24hours",
+          "right_opt":"As soon as possible but within 24hours"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 27,
+        "fields": {
+          "category": 7,
+          "question": "What is the pedestrian crossing?",
+          "opt_1":"A crossing meant for school children",
+          "opt_2":"A safe crossing provided for safe use of pedestrians",
+          "opt_3":"A crossing located in areas with high pedestrian traffic",
+          "opt_4":"A crossing found at an intersection or T junction",
+          "opt_5":"",
+          "opt_6":"",
+          "opt_7":"",
+          "right_opt":"A safe crossing provided for safe use of pedestrians"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 28,
+        "fields": {
+          "category": 7,
+          "question": "The following are the rules of the model town board, EXCEPT?",
+          "opt_1":"Use the shortest and the most correct route with using parking",
+          "opt_2":"Use the shortest and the most correct route without using parking",
+          "opt_3":"Use the longest and the most correct route without using parking",
+          "opt_4":"Use parking if there is no any other route",
+          "right_opt":"Use the shortest and the most correct route with using parking"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 29,
+        "fields": {
+          "category": 7,
+          "question": "Green color on the traffic lights means go except?",
+          "opt_1":"When there is on coming vehicle from right",
+          "opt_2":"When stopped by a police officer",
+          "opt_3":"Only B",
+          "opt_4":"Both A & B",
+          "right_opt":"Both A & B"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 30,
+        "fields": {
+          "category": 7,
+          "question": "The following include the four key places you cannot stop EXCEPT?",
+          "opt_1":"On round about",
+          "opt_2":"At the entrance of a hospital",
+          "opt_3":"At the center of the road",
+          "opt_4":"Where there is no stopping sign",
+          "opt_5":"At the junction",
+          "right_opt":"At the entrance of a hospital"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 31,
+        "fields": {
+          "category": 2,
+          "question": "Considering the following locations, Where should you overtake?",
+          "opt_1":"On a highway",
+          "opt_2":"At the junction",
+          "opt_3":"Where there is a NO overtaking sign",
+          "opt_4":"On the round about",
+          "right_opt":"On a highway"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 32,
+        "fields": {
+          "category": 2,
+          "question": "You should stop in all the following situations, EXCEPT?",
+          "opt_1":"At the stop sign",
+          "opt_2":"When ordered by the police",
+          "opt_3":"When the traffic lights changes to red",
+          "opt_4":"To make way for government officials",
+          "right_opt":"To make way for government officials"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 33,
+        "fields": {
+          "category": 2,
+          "question": "When do you use the mirror when driving?",
+          "opt_1":"When overtaking",
+          "opt_2":"Changing lane",
+          "opt_3":"Stopping",
+          "opt_4":"In all the above situations",
+          "right_opt":"In all the above situations"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 34,
+        "fields": {
+          "category": 2,
+          "question": "What distance should you keep between two moving vehicles in town?",
+          "opt_1":"A reasonable distance as judged by a driver",
+          "opt_2":"You should see the behind wheels or the number plate of the vehicle infront",
+          "opt_3":"At least two metres",
+          "opt_4":"At least two vehicle lengths",
+          "right_opt":"You should see the behind wheels or the number plate of the vehicle infront"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 35,
+        "fields": {
+          "category": 2,
+          "question": "What is the meaning of the letter EAK found at the outer cover of a driving license?",
+          "opt_1":"East Africa / Kenya",
+          "opt_2":"East African Community",
+          "opt_3":"East African Transport Authority",
+          "opt_4":"East African Transport Association",
+          "right_opt":"East Africa / Kenya"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 36,
+        "fields": {
+          "category": 2,
+          "question": "How should a driver control himself in an uncontrolled roundabout?",
+          "opt_1":"You should make sure there is no oncoming vehicle from the left side of the round about",
+          "opt_2":"You should make sure there is no oncoming vehicle from any side of the round about",
+          "opt_3":"Be patient and follow other vehicles",
+          "opt_4":"You should make sure there is no oncoming vehicle from the right side of the round about",
+          "right_opt":"You should make sure there is no oncoming vehicle from the right side of the round about"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 37,
+        "fields": {
+          "category": 2,
+          "question": "The following are the don'ts of holding a steering wheel, EXCEPT?",
+          "opt_1":"Don't crisscross hands",
+          "opt_2":"Don't hold with only one hand",
+          "opt_3":"Don't hold with the elbow",
+          "opt_4":"Don't turn the steering wheel too quickly",
+          "opt_5":"Don't grip the steering wheel very firmly",
+          "right_opt":"Don't turn the steering wheel too quickly"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 38,
+        "fields": {
+          "category": 2,
+          "question": "What is the name given to anybody carrying a sign of STOP CHILDREN CROSSING?",
+          "opt_1":"School staff",
+          "opt_2":"School warden",
+          "opt_3":"School conductor",
+          "opt_4":"Teacher",
+          "right_opt":"School warden"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 39,
+        "fields": {
+          "category": 2,
+          "question": "Why do we normally press down the clutch peddle when engaging gear?",
+          "opt_1":"To disconnect the gear box from the engine",
+          "opt_2":"To effectively activate the new gear position selected",
+          "opt_3":"To save conserve fuel by shifting gears slowly",
+          "opt_4":"Its a required procedure",
+          "right_opt":"To disconnect the gear box from the engine"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 40,
+        "fields": {
+          "category": 2,
+          "question": "What must you NOT do when being overtaken?",
+          "opt_1":"Stay focussed on your driving and avoid getting distracted by staring at the other driver",
+          "opt_2":"You should give the overtaking vehicle the space they need by keeping left",
+          "opt_3":"You should not accelerate",
+          "opt_4":"You should slow donw to make it easier for them to overtake quickly",
+          "right_opt":"You should not accelerate"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 41,
+        "fields": {
+          "category": 2,
+          "question": "When can you overtake from left?",
+          "opt_1":"When the vehicle in-front is turning right",
+          "opt_2":"When driving on a one way traffic road with more than one lane",
+          "opt_3":"When there is an accident on the right and there is space on the left",
+          "opt_4":"All the above are true",
+          "right_opt":"All the above are true"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 42,
+        "fields": {
+          "category": 2,
+          "question": "In which of the folowing scenarios can lights NOT be dimmed at night?",
+          "opt_1":"When meeting a pedestrian",
+          "opt_2":"When meeting on coming vehicle",
+          "opt_3":"On a well lit area",
+          "opt_4":"In dark environments where visibility is poor",
+          "right_opt":"In dark environments where visibility is poor"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 43,
+        "fields": {
+          "category": 2,
+          "question": "In which of the following areas are you ALLOWED to HOOT",
+          "opt_1":"Near hospital",
+          "opt_2":"Near school",
+          "opt_3":"Near law court",
+          "opt_4":"Where there is NO hooting sign",
+          "opt_5":"In a busy street",
+          "right_opt":"In a busy street"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 44,
+        "fields": {
+          "category": 2,
+          "question": "What time do you switch on light in the evening?",
+          "opt_1":"6:30 pm parking lights 6:45pm head light",
+          "opt_2":"6:30 pm head light 6:45pm parking lights",
+          "opt_3":"7:30 pm parking head 7:45pm head light",
+          "opt_4":"7:30 pm head light 7:45pm parking lights",
+          "right_opt":"6:30 pm parking lights 6:45pm head light"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 45,
+        "fields": {
+          "category": 2,
+          "question": "What do you do before getting out of the vehicle?",
+          "opt_1":"Turn the vehicle off and remove your seat belt",
+          "opt_2":"Pull up the handbrake",
+          "opt_3":"Check the side mirror or look over your right shoulder",
+          "opt_4":"Make sure the car is locked",
+          "opt_5":"",
+          "opt_6":"",
+          "opt_7":"",
+          "right_opt":"Check the side mirror or look over your right shoulder"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 46,
+        "fields": {
+          "category": 3,
+          "question": "Which of the following parts of a car MAY NOT be regulalrly maintained",
+          "opt_1":"Brakes",
+          "opt_2":"Radio and sound system",
+          "opt_3":"Steering wheel",
+          "opt_4":"Wheels",
+          "opt_5":"Lights",
+          "right_opt":"Radio and sound system"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 47,
+        "fields": {
+          "category": 3,
+          "question": "When are you NOT allowed to park?",
+          "opt_1":"At the corner of the road",
+          "opt_2":"Where there is no parking sign",
+          "opt_3":"At the junction",
+          "opt_4":"At the bus stop",
+          "opt_5":"In all the above areas",
+          "right_opt":"In all the above areas"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 48,
+        "fields": {
+          "category": 3,
+          "question": "What is a caravan?",
+          "opt_1":"Its part of a trailer",
+          "opt_2":"It is a mobile car without engine pulled with an engine car and it can be use for accommodation",
+          "opt_3":"Refers to several vehicles moving together in a line",
+          "opt_4":"Its the passenger cabin of a bus",
+          "right_opt":"It is a mobile car without engine pulled with an engine car and it can be use for accommodation"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 49,
+        "fields": {
+          "category": 3,
+          "question": "What should you do when approaching uncontrolled railway crossing at?",
+          "opt_1":"At all times - dim lights, check if the train is close by",
+          "opt_2":"Night - stop, dim lights listen if there is no sound,proceed",
+          "opt_3":"Daytime - stop, look left and right listen if there is no sound proceed",
+          "opt_4":"Both B and C",
+          "opt_5":"only B",
+          "opt_6":"Both A and B",
+          "right_opt":"Both B and C"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 50,
+        "fields": {
+          "category": 3,
+          "question": "The following are common mistakes made when approaching a round about, EXCEPT ONE, identify it.",
+          "opt_1":"Approaching the roundabout with wrong lane",
+          "opt_2":"Changing lanes on the roundabout",
+          "opt_3":"Checking for traffic on one's right side",
+          "opt_4":"Leaving the roundabout the wrong lane",
+          "opt_5":"Observing traffic from wrong side",
+          "right_opt":"Checking for traffic on one's right side"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 51,
+        "fields": {
+          "category": 3,
+          "question": "Whats the best way of keeping your vehicle roadworthy?",
+          "opt_1":"Ensure Your wheels are in a good condition",
+          "opt_2":"Ensure all Lights are in a good condition",
+          "opt_3":"Keep the steering wheel in a good condition",
+          "opt_4":"Ensure your brakes are working",
+          "opt_5":"Mirrors are okay",
+          "opt_6":"All the above are true",
+          "right_opt":"All the above are true"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 52,
+        "fields": {
+          "category": 3,
+          "question": "Describe your approach at a pedestrian crossing?",
+          "opt_1":"Alert and at a speed of which he can control and stop incase of emergency",
+          "opt_2":"Alert but at a reasonable speed if there is no traffic",
+          "opt_3":"Alert but at a slow speed",
+          "opt_4":"All of the above are true",
+          "right_opt":"Alert and at a speed of which he can control and stop incase of emergency"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 53,
+        "fields": {
+          "category": 3,
+          "question": "How do you hold the steering wheel clockwise?",
+          "opt_1":"8 to 0 position and ¼ to 3 position",
+          "opt_2":"10 to 2 position and 2 to 3 position",
+          "opt_3":"10 to 2 position and ¼ to 3 position",
+          "opt_4":"8 to 0 position and ¼ to 2 position",
+          "right_opt":"10 to 2 position and ¼ to 3 position"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 54,
+        "fields": {
+          "category": 3,
+          "question": "What do you do if, as crossing by the traffic lights is green then they suddenly change to amber?",
+          "opt_1":"You should stop and wait for pedestrians to cross",
+          "opt_2":"You should proceed as the light was green when crossing",
+          "opt_3":"You should proceed if you had crossed the stop sign",
+          "opt_4":"You should proceed if there are no pedestrians",
+          "right_opt":"You should proceed if you had crossed the stop sign"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 55,
+        "fields": {
+          "category": 3,
+          "question": "What is the correct position at the junction when turning?",
+          "opt_1":"left : drive at an extreme left, right : drive at an extreme right",
+          "opt_2":"left : drive at an extreme right, right : drive at an extreme left",
+          "opt_3":"left : drive in any lane, right : drive at an extreme right",
+          "opt_4":"left : drive at an extreme left, right : drive in any lane",
+          "opt_5":"",
+          "opt_6":"",
+          "opt_7":"",
+          "right_opt":"left : drive at an extreme left, right : drive at an extreme right"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 56,
+        "fields": {
+          "category": 3,
+          "question": "What does the green arrow filter on the traffic lights mean?",
+          "opt_1":"You should proceed to where you intend to go",
+          "opt_2":"You should stop as there is traffic oming from the direction indicated",
+          "opt_3":"You should go to any direction you please",
+          "opt_4":"You should go to the direction shown by the arrows",
+          "right_opt":"You should go to the direction shown by the arrows"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 57,
+        "fields": {
+          "category": 3,
+          "question": "The following vehicles are taken for inspection EXCEPT?",
+          "opt_1":"Trailers",
+          "opt_2":"Pickups",
+          "opt_3":"Lorries",
+          "opt_4":"Personal Cars",
+          "right_opt":"Personal Cars"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 58,
+        "fields": {
+          "category": 3,
+          "question": "Which is the strongest gear on a vehicle and why?",
+          "opt_1":"Gear One - the lowest gear",
+          "opt_2":"Reverse gear because it has no any other alternative gear",
+          "opt_3":"Gear Three - One of the highest in most vehicles",
+          "opt_4":"All gears have the same power",
+          "right_opt":"Reverse gear because it has no any other alternative gear"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 59,
+        "fields": {
+          "category": 3,
+          "question": "Why should you look right twice when approaching a junction?",
+          "opt_1":"Vehicles coming from both behind on your right and from your right side of the jucntion, which increases the danger of a collision",
+          "opt_2":"Most vehicles will try to overtake from the right side",
+          "opt_3":"The left side has slow moving traffic",
+          "opt_4":"So as to note any oncoming vehicles",
+          "opt_5":"",
+          "opt_6":"",
+          "opt_7":"",
+          "right_opt":"Vehicles coming from both behind on your right and from your Right side of the jucntion, which increases the danger of a collision"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 60,
+        "fields": {
+          "category": 3,
+          "question": "Which of the following is NOT one of the steps that should be followed when overtaking another vehicle",
+          "opt_1":"Start indicating right",
+          "opt_2":"Determine is right lane is clear, - If its clear you overtake",
+          "opt_3":"After overtaking you indicate to the left and keep to  your side",
+          "opt_4":"Slow down after successfully overtaking",
+          "right_opt":"Slow down after successfully overtaking"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 61,
+        "fields": {
+          "category": 4,
+          "question": "When the traffic lights show green and you are stopped by police officer, who should you obey?",
+          "opt_1":"You should politely telll the officer you cannot stop because of the lights",
+          "opt_2":"You should obey police because it is mandatory to do so",
+          "opt_3":"You should obey the traffic lights because it is mandatory to do so",
+          "opt_4":"You should proceed if you are sure there is nothing wrong",
+          "right_opt":"You should obey police because it is mandatory to do so"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 62,
+        "fields": {
+          "category": 4,
+          "question": "What is a hard shoulder way?",
+          "opt_1":"A lane reserved for emergency vehicles such as ambulances",
+          "opt_2":"An emergency lane that runs along the left-hand side of a motorway carriageway",
+          "opt_3":"A lane reserved for personal cars and public transport vehicles",
+          "opt_4":"A lane for high speed vehicles on a highway",
+          "right_opt":"an emergency lane that runs along the left-hand side of a motorway carriageway"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 63,
+        "fields": {
+          "category": 4,
+          "question": "What is another name given to a give way sign?",
+          "opt_1":"Yield sign",
+          "opt_2":"Stop sign",
+          "opt_3":"Slow down sign",
+          "opt_4":"Turn sign",
+          "right_opt":"Yield sign"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 64,
+        "fields": {
+          "category": 4,
+          "question": "What is the different between a street and an avenue?",
+          "opt_1":"A street is usually larger than an avenue",
+          "opt_2":"Avenues have lower speed limits when compared to streets",
+          "opt_3":"A street is where buildings are on both sides of the road, while an Avenue is where vegetation is on both sides of the road",
+          "opt_4":"Both streets and avenues are parallell to each other and not perpendicular",
+          "right_opt":"A street is where buildings are on both sides of the road, while an Avenue is where vegetation is on both sides of the road"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 65,
+        "fields": {
+          "category": 4,
+          "question": "What is the meaning of AMBER which keeps on flushing every now and then in the traffic lights?",
+          "opt_1":"Control yourself",
+          "opt_2":"Stop for crossing pedestrians",
+          "opt_3":"Proceed with Caution",
+          "opt_4":"Proceed at prescribed speed limit",
+          "right_opt":"Control yourself"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 66,
+        "fields": {
+          "category": 4,
+          "question": "Which mechanical signal should we put on after involved in a road accident in the middle of the road?",
+          "opt_1":"Stop sign",
+          "opt_2":"Hazard light",
+          "opt_3":"Yield sign",
+          "opt_4":"Slow down sign",
+          "right_opt":"Hazard light"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 67,
+        "fields": {
+          "category": 4,
+          "question": "Which gear should be used to start a loaded lorry and why?",
+          "opt_1":"Gear number one because it is more strong than number two",
+          "opt_2":"Gear number three because it is more strong than number one and two",
+          "opt_3":"Gear number two because it is more strong than number one and three",
+          "opt_4":"Any gear would do",
+          "right_opt":"Gear number one because it is more strong than number two"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 68,
+        "fields": {
+          "category": 4,
+          "question": "Which is the biggest roundabout in East Africa?",
+          "opt_1":"Nyayo round about",
+          "opt_2":"T-mall round about",
+          "opt_3":"Globe cinema round about",
+          "opt_4":"Kenyatta road round about",
+          "right_opt":"Globe cinema round about"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 69,
+        "fields": {
+          "category": 4,
+          "question": "Why are commercial vehicles taken for inspection?",
+          "opt_1":"To check if they violated any traffic rules",
+          "opt_2":"To identify any disallowed modifications",
+          "opt_3":"To make sure they are in good condition and road worthy",
+          "opt_4":"To ensure the staff using them are qualified",
+          "right_opt":"To make sure they are in good condition and road worthy"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 70,
+        "fields": {
+          "category": 4,
+          "question": "What is the meaning of MS in driving?",
+          "opt_1":"Mechanic sign",
+          "opt_2":"Machine signal",
+          "opt_3":"Marching sign",
+          "opt_4":"Mechanical signal",
+          "right_opt":"Mechanical signal"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 71,
+        "fields": {
+          "category": 4,
+          "question": "Why is the headlight of motorbikes on always even during the day time?",
+          "opt_1":"For better visibility",
+          "opt_2":"To be seen by other road users",
+          "opt_3":"Due to their high speed",
+          "opt_4":"Its how motorbikes are designed to work",
+          "right_opt":"To be seen by other road users"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 72,
+        "fields": {
+          "category": 4,
+          "question": "Which signs are circled?",
+          "opt_1":"Warning signs",
+          "opt_2":"Mandatory and regulatory signs",
+          "opt_3":"Information signs",
+          "opt_4":"Priority signs",
+          "right_opt":"Mandatory and regulatory signs"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 73,
+        "fields": {
+          "category": 4,
+          "question": "Which signs are triangle?",
+          "opt_1":"Warning and hazard or cautionary",
+          "opt_2":"Information signs",
+          "opt_3":"Priority signs",
+          "opt_4":"Mandatory and regulatory signs",
+          "right_opt":"Warning and hazard or cautionary"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 74,
+        "fields": {
+          "category": 4,
+          "question": "Which signs have the apex facing upwards?",
+          "opt_1":"Information signs",
+          "opt_2":"Priority signs",
+          "opt_3":"Mandatory and regulatory signs",
+          "opt_4":"Warning signs",
+          "right_opt":"Warning signs"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 75,
+        "fields": {
+          "category": 4,
+          "question": "Why do we observe regulatory signs?",
+          "opt_1":"To minimize the possibility of accidents",
+          "opt_2":"Because traffic laws require that they be observed",
+          "opt_3":"For efficient traffic flow",
+          "opt_4":"Its good practice while driving",
+          "right_opt":"Because they are signs to be observed"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 76,
+        "fields": {
+          "category": 5,
+          "question": "What do we call the two major signs in Kenya?",
+          "opt_1":"Mandatory and regulatory signs",
+          "opt_2":"Warning signs",
+          "opt_3":"Information signs",
+          "opt_4":"Priority signs",
+          "right_opt":"Priority signs"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 77,
+        "fields": {
+          "category": 5,
+          "question": "What is the difference between heavy and light commercial vehicles?",
+          "opt_1":"Heavy commercial vehicle are those vehicles which are exceeding 3.05 tonnes tire weight and light commercial vehicle have less than that weight",
+          "opt_2":"Heavy commercial vehicle are those vehicles which are exceeding 5.05 tonnes tire weight and light commercial vehicle have less than that weight",
+          "opt_3":"Heavy commercial vehicle are those vehicles which are exceeding 2.05 tonnes tire weight and light commercial vehicle have less than that weight",
+          "opt_4":"Heavy commercial vehicle are those vehicles which are exceeding 1.05 tonnes tire weight and light commercial vehicle have less than that weight",
+          "opt_5":"",
+          "opt_6":"",
+          "opt_7":"",
+          "right_opt":"Heavy commercial vehicle are those vehicles which are exceeding 3.05 tonnes tire weight and light commercial vehicle have less than that weight"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 78,
+        "fields": {
+          "category": 5,
+          "question": "What is the difference between railway crossing and level crossing?",
+          "opt_1":"Railway crossing are those crossing found in the urban areas while level crossing are those crossings found in rural area",
+          "opt_2":"Railway crossing are those connecting railway and road networks while level crossing are those connecting two roads",
+          "opt_3":"Railway crossing are those crossing found in the rural areas while level crossing are those crossings found in urban area",
+          "opt_4":"There is no clear distinction between the two",
+          "right_opt":"Railway crossing are those crossing found in the rural areas while level crossing are those crossings found in urban area"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 79,
+        "fields": {
+          "category": 5,
+          "question": "What is hazard demarcation?",
+          "opt_1":"Signs that generally indicate danger",
+          "opt_2":"Are reflective plates attached at the edge of the bridge to show then width on the bridge at night",
+          "opt_3":"Signs placed on the road when one's vehicle breaks down",
+          "opt_4":"Areas of a road that are closed off due to repairs that are in progress",
+          "right_opt":"Are reflective plates attached at the edge of the bridge to show then width on the bridge at night"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 80,
+        "fields": {
+          "category": 5,
+          "question": "Define term “horn” in a vehicle?",
+          "opt_1":"A sound made by a vehicle to alert others of one's presence",
+          "opt_2":"It is a instrument used to alert other road users of your presence",
+          "opt_3":"Its part of the sound system of a vehicle",
+          "opt_4":"Its part of the engine",
+          "right_opt":"It is a instrument used to alert other road users of your presence"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 81,
+        "fields": {
+          "category": 5,
+          "question": "What is hooting?",
+          "opt_1":"It is a sound produced by a horn",
+          "opt_2":"A means of expressing one's frustration with other drivers",
+          "opt_3":"A way of greeting others one sees when driving",
+          "opt_4":"All of the above are true",
+          "right_opt":"It is a sound produced by a horn"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 82,
+        "fields": {
+          "category": 5,
+          "question": "The following are the THREE ways one should HOOT, EXCEPT?",
+          "opt_1":"Thrice means an alert signal",
+          "opt_2":"Once means warning",
+          "opt_3":"Twice means greeting",
+          "opt_4":"Several times means abusing",
+          "right_opt":"Thrice means an alert signal"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 83,
+        "fields": {
+          "category": 5,
+          "question": "What is the main function of clutch pedal on a vehicle?",
+          "opt_1":"To reduce the speed of the vehicle when changing gears",
+          "opt_2":"To connect and disconnect the gear box from the engine",
+          "opt_3":"To manage fuel consumption",
+          "opt_4":"To aid in the process of changing gears",
+          "right_opt":"To connect and disconnect the gear box from the engine"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 84,
+        "fields": {
+          "category": 5,
+          "question": "Which ONE of the following is not a Category of Traffic Signs?",
+          "opt_1":"Mandatory",
+          "opt_2":"Warning",
+          "opt_3":"Speed",
+          "opt_4":"Information",
+          "right_opt":"Speed"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 85,
+        "fields": {
+          "category": 5,
+          "question": "When you intend to turn what distance should you start indicating?",
+          "opt_1":"You should start indicating at a distance of 50m in advance",
+          "opt_2":"You should start indicating at a distance of 30m in advance",
+          "opt_3":"You should start indicating at a distance of 200m in advance",
+          "opt_4":"You should start indicating at a distance of 10m in advance",
+          "right_opt":"You should start indicating at a distance of 50m in advance"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 86,
+        "fields": {
+          "category": 5,
+          "question": "What is the difference between turning left and passing left?",
+          "opt_1":"When passing left there is a complete change of direction to be made but turning left means to keep left",
+          "opt_2":"When turning left there is a complete change of direction to the right but passing left means to turning to the left",
+          "opt_3":"When turning left there is a complete change of direction to be made but passing left means to keep left",
+          "opt_4":"There is no major difference between the two",
+          "right_opt":"When turning left there is a complete change of direction to be made but passing left means to keep left"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 87,
+        "fields": {
+          "category": 5,
+          "question": "What is an ”engine”?",
+          "opt_1":"A device that powers the headlights of the vehicle",
+          "opt_2":"A device that controls the AC and radio",
+          "opt_3":"Its the most important part of a vehicle",
+          "opt_4":"A power generating machine that keep the vehicle in motion",
+          "right_opt":"A power generating machine that keep the vehicle in motion"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 88,
+        "fields": {
+          "category": 5,
+          "question": "What is the main purpose of a Driving license?",
+          "opt_1":"Is an important part of one's identification",
+          "opt_2":"To allow you to drive on roads within east Africa",
+          "opt_3":"To be used for job applications",
+          "opt_4":"To be inspected by traffic officers where necessary",
+          "right_opt":"To allow you to drive on roads within east Africa"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 89,
+        "fields": {
+          "category": 5,
+          "question": "What is the main purpose of an Insurance certificate ",
+          "opt_1":"To minimize costs in case of a negative incident",
+          "opt_2":"To comply with legal requirements",
+          "opt_3":"To benefit insurance companies",
+          "opt_4":"For security purposes",
+          "right_opt":"For security purposes"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 90,
+        "fields": {
+          "category": 5,
+          "question": "What is the main purpose of a Vehicle inspection certificate ",
+          "opt_1":"To show the road worthiness of a vehicle",
+          "opt_2":"To ensure a vehicle has all required modifications",
+          "opt_3":"To earn revenue for the traffic department",
+          "opt_4":"To assure the public about the quality of a vehicle",
+          "right_opt":"To show the road worthiness of a vehicle"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 91,
+        "fields": {
+          "category": 6,
+          "question": "What is coasting?",
+          "opt_1":"It is driving a vehicle for a long distance only with one gear",
+          "opt_2":"It is driving a vehicle for a short distance only with one gear",
+          "opt_3":"It is driving a vehicle for a medium distance only with one gear",
+          "opt_4":"It is driving a vehicle for a short distance only with two gears",
+          "right_opt":"It is driving a vehicle for a long distance only with one gear"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 92,
+        "fields": {
+          "category": 6,
+          "question": "What is three point turn in driving?",
+          "opt_1":"It is driving a vehicle facing to the right direction with use of reverse and forward gear",
+          "opt_2":"It is driving a vehicle facing to the left direction with use of reverse and forward gear",
+          "opt_3":"It is driving a vehicle facing the forward direction with use of reverse and forward gear",
+          "opt_4":"It is driving a vehicle facing to opposite direction with use of reverse and forward gear",
+          "right_opt":"It is driving a vehicle facing to opposite direction with use of reverse and forward gear"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 93,
+        "fields": {
+          "category": 6,
+          "question": "Describe the warning sign?",
+          "opt_1":"They are red in color, triangular in shape with apex facing downwards",
+          "opt_2":"They are red in color, triangular in shape with apex facing upwards",
+          "opt_3":"They are red in amber, triangular in shape with apex facing upwards",
+          "opt_4":"They are red in amber, triangular in shape with apex facing downwards",
+          "right_opt":"They are red in color, triangular in shape with apex facing upwards"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 94,
+        "fields": {
+          "category": 6,
+          "question": "List down two examples of caravan?",
+          "opt_1":"Side car",
+          "opt_2":"Mobile toilet/clinic",
+          "opt_3":"Public service buses",
+          "opt_4":"A & B",
+          "opt_5":"A, B & C",
+          "right_opt":"A & B"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 95,
+        "fields": {
+          "category": 6,
+          "question": "Write down all the mechanical signals of a saloon car?",
+          "opt_1":"Headlights, parking lights, brake lights,reverse lights, interior lights and hazards lights",
+          "opt_2":"Headlights, parking lights, brake lights,reverse lights, indicators,number plates light, interior lights and hazards lights",
+          "opt_3":"Headlights, parking lights, brake lights,number plates light, interior lights and hazards lights",
+          "opt_4":"Headlights, parking lights, brake lights,reverse lights, indicators,number plates light, and hazards lights",
+          "right_opt":"Headlights, parking lights, brake lights,reverse lights, indicators,number plates light, interior lights and hazards lights"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 96,
+        "fields": {
+          "category": 6,
+          "question": "Why must all vehicles be insured?",
+          "opt_1":"For security purposes",
+          "opt_2":"To comply with traffic laws",
+          "opt_3":"to control costs in case of an accident",
+          "opt_4":"For ease of repairs in case of an accident",
+          "right_opt":"For security purposes"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 97,
+        "fields": {
+          "category": 6,
+          "question": "What is the meaning of a PDL?",
+          "opt_1":"Practice driving license",
+          "opt_2":"Private driving license",
+          "opt_3":"Provisional driving license",
+          "opt_4":"Public driving license",
+          "right_opt":"Provisional driving license"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 98,
+        "fields": {
+          "category": 6,
+          "question": "What is the use of speed governors and safety belts?",
+          "opt_1":"To comply with traffic rules and requirements",
+          "opt_2":"To improve safety for road users",
+          "opt_3":"To minimize casualties in case of an accident",
+          "opt_4":"To maintain a specific speed given on highway according to the vehicle you are driving and to reduce the number of injuries during accidents",
+          "right_opt":"To maintain a specific speed given on highway according to the vehicle you are driving and to reduce the number of injuries during accidents"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 99,
+        "fields": {
+          "category": 6,
+          "question": "Class A signs are subdivided into THREE main groups, Which of the following is NOT among them?",
+          "opt_1":"Priority signs(stop sign)",
+          "opt_2":"Compulsory signs(all vehicles must keep left)",
+          "opt_3":"Regulatory signs(no entry)",
+          "opt_4":"Warning signs (stop)",
+          "right_opt":"Warning signs (stop)"
+        }
+      },
+      {
+        "model": "core.QuizQuestion",
+        "pk": 100,
+        "fields": {
+          "category": 6,
+          "question": "As a driver, when you come across river bed crossing explain how do you cross it?",
+          "opt_1":"Use judgment to determine if its safe to cross",
+          "opt_2":"Ask people in the area if its safe to cross",
+          "opt_3":"One has to know how deep is the river before you cross by deeping the stick in the water",
+          "opt_4":"If you are using a powerful vehicle just cross",
+          "right_opt":"One has to know how deep is the river before you cross by deeping the stick in the water"
+        }
+      }
+      
+  ]

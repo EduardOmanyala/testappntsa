@@ -1,0 +1,92 @@
+[
+    {
+        "model": "core.QuizCategory",
+        "pk": 1,
+        "fields": {
+          "title": "Test One",
+          "heading":"NTSA Test Questions",
+          "type":"paid"
+        }
+      },
+      {
+        "model": "core.QuizCategory",
+        "pk": 2,
+        "fields": {
+          "title": "Test Two",
+          "heading":"NTSA Test Questions",
+          "type":"paid"
+        }
+      },
+      {
+        "model": "core.QuizCategory",
+        "pk": 3,
+        "fields": {
+          "title": "Test Three",
+          "heading":"NTSA Test Questions",
+          "type":"paid"
+        }
+      },
+      {
+        "model": "core.QuizCategory",
+        "pk": 4,
+        "fields": {
+          "title": "Test Four",
+          "heading":"NTSA Test Questions",
+          "type":"paid"
+        }
+      },
+      {
+        "model": "core.QuizCategory",
+        "pk": 5,
+        "fields": {
+          "title": "Test Five",
+          "heading":"NTSA Test Questions",
+          "type":"paid"
+        }
+      },
+      {
+        "model": "core.QuizCategory",
+        "pk": 6,
+        "fields": {
+          "title": "Test Six",
+          "heading":"NTSA Test Questions",
+          "type":"paid"
+        }
+      },
+      {
+        "model": "core.QuizCategory",
+        "pk": 7,
+        "fields": {
+          "title": "Test Seven",
+          "heading":"NTSA Test Questions",
+          "type":"paid"
+        }
+      },
+      {
+        "model": "core.QuizCategory",
+        "pk": 8,
+        "fields": {
+          "title": "Test Eight",
+          "heading":"NTSA Test Eight",
+          "type":"free"
+        }
+      },
+      {
+        "model": "core.QuizCategory",
+        "pk": 9,
+        "fields": {
+          "title": "Test Nine",
+          "heading":"NTSA Test Nine",
+          "type":"free"
+        }
+      },
+      {
+        "model": "core.QuizCategory",
+        "pk": 10,
+        "fields": {
+          "title": "Test Ten",
+          "heading":"NTSA Test Ten",
+          "type":"free"
+        }
+      }
+]
