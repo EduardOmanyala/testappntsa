@@ -12,7 +12,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = ['143.110.180.180']
+ALLOWED_HOSTS = ['dltest.testprepken.com','www.dltest.testprepken.com']
 #ALLOWED_HOSTS = []
 
 
