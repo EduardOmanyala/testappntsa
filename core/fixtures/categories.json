@@ -5,7 +5,7 @@
         "fields": {
           "title": "Test One",
           "heading":"NTSA Test Questions",
-          "type":"paid"
+          "type":"free"
         }
       },
       {
@@ -14,7 +14,7 @@
         "fields": {
           "title": "Test Two",
           "heading":"NTSA Test Questions",
-          "type":"paid"
+          "type":"free"
         }
       },
       {
@@ -23,7 +23,7 @@
         "fields": {
           "title": "Test Three",
           "heading":"NTSA Test Questions",
-          "type":"paid"
+          "type":"free"
         }
       },
       {
@@ -68,7 +68,7 @@
         "fields": {
           "title": "Test Eight",
           "heading":"NTSA Test Eight",
-          "type":"free"
+          "type":"paid"
         }
       },
       {
@@ -77,7 +77,7 @@
         "fields": {
           "title": "Test Nine",
           "heading":"NTSA Test Nine",
-          "type":"free"
+          "type":"paid"
         }
       },
       {
@@ -86,7 +86,7 @@
         "fields": {
           "title": "Test Ten",
           "heading":"NTSA Test Ten",
-          "type":"free"
+          "type":"paid"
         }
       }
 ]
