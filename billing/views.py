@@ -128,7 +128,7 @@ def pricing_corporate(request):
 
 @login_required
 def finpayment(request):
-    mydata = Post.objects.filter(user=request.user)
+    mydata = Post.objects.filter(user=request.user).order_by('-id')[:1]
     if not mydata:
         return redirect('post-create')
     else:

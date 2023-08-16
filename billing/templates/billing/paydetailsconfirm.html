@@ -6,14 +6,15 @@
   <div></div>
   <div>
       <div class="plan-selector12">
+        <img src="{% static 'core/images3/mpesa.jpg' %}" alt="" />
+        
+        <h6>Safaricom Phone Number on Record:</h6>
         <br>
-        <h6>Please Confirm if this is still your MPESA Number</h6>
-        <br><br>
             {% for row in mydata %}
             <h5 class="article-title" style="color:#1e90ff;">{{ row.phonenumber }}</h5>
             {% endfor %}
             <br>
-            <h6> if yes, Click Here to Proceed,  </h6>
+            <h6> Please continue if this is still your number </h6>
             <br>
             <button type="button" onclick="location.href='{% url 'paymentroute' %}'" class="btn3 btn btn-primary btn-lg">Continue</button>
 

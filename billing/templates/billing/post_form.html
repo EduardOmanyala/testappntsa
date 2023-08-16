@@ -6,10 +6,11 @@
     <div></div>
     <div>
         <div class="plan-selector12">
+          <img src="{% static 'core/images3/mpesa.jpg' %}" alt="" />
             <h6>Enter Mpesa Number to be used for Payment</h6>
             <br>
             {% load crispy_forms_tags %}
-            <form method="post" enctype="multipart/form-data">
+            <form method="post" enctype="multipart/form-data" class="ml-2 mr-2">
                 {% csrf_token %}
                 {{ form|crispy }}
                 <button type="submit" class="btn3 btn btn-primary">Submit</button>
