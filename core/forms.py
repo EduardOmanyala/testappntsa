@@ -1,7 +1,7 @@
 from django import forms 
 from custom_user.models import User
 from django.contrib.auth.forms import UserCreationForm
-from billing.models import ContactDetails
+
 
 
 
@@ -21,10 +21,3 @@ class UserRegisterForm(UserCreationForm):
         model = User
         fields = ('first_name', 'last_name', 'email', 'password1','password2')
 
-
-
-class ContactsForm(forms.ModelForm):
-    class Meta:
-        model = ContactDetails
-        #fields = ['number']
-        exclude = ["user"]

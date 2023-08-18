@@ -3,10 +3,10 @@ from django.http import HttpResponse, JsonResponse
 from django_daraja.mpesa.core import MpesaClient
 from django.views.decorators.csrf import csrf_exempt
 import json
-from billing.models import StatusPayment, ContactDetails, Post #, PaymentConfirm
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from billing.models import Post, PaymentDetails 
 from django.db.models import Max
 from django.contrib.auth.decorators import login_required
-from core.forms import ContactsForm
 from custom_user.models import User
 
 from django.views.generic import (
@@ -29,15 +29,17 @@ def mpesarequest(request):
     response = cl.stk_push(phone_number, amount, account_reference, transaction_desc, callback_url)
     return HttpResponse(response)
 
-
+# Include user pk on callback( request, pk), then create new model record with user pk
 @csrf_exempt
-def callbackurl(request):
+def callbackurl(request, id):
+    user_id = User.objects.get(id=id)
     if request.method == 'POST':
         m_body =request.body.decode('utf-8')
         mpesa_payment = json.loads(m_body)
-        payment = StatusPayment(
-            phoneno=mpesa_payment['Body']['stkCallback']['CallbackMetadata']['Item'][4]['Value'],
+        payment = PaymentDetails(
+            phonenumber=mpesa_payment['Body']['stkCallback']['CallbackMetadata']['Item'][4]['Value'],
         	transcode=mpesa_payment['Body']['stkCallback']['CallbackMetadata']['Item'][1]['Value'],
+            user=user_id,
         )
         payment.save()
         context = {
@@ -50,38 +52,11 @@ def callbackurl(request):
 
 
     
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.views import View
-class ContactsAddView(LoginRequiredMixin, View):
-    def get(self, request, *args, **kwargs):
-        form = ContactsForm()
-        context = {'form':form}
-        return render(request, 'billing/paymentcontacts.html', context)
-    
-    def post(self, request, *args, **kwargs):
-           
-        form = ContactsForm(request.POST)
-        form.instance.user = request.user
-        if form.is_valid():
-            form.save()
-            return HttpResponse('form saved successfully')
-        
 
-class GeeksUpdateView(LoginRequiredMixin, UpdateView):
-    model = ContactDetails
-    fields = ["number"]
-    #template_name_suffix = "billing/paymentcontacts.html"
+
+    
     
 
-
-# listings/views.py
-
-@login_required
-def band_update(request, id):
-    #user = request.user
-    band = ContactDetails.objects.get(id=id)
-    form = ContactsForm(instance=band) # prepopulate the form with an existing band
-    return render(request, 'billing/paymentcontacts.html', {'form': form})
   
  
 class PostCreateView(LoginRequiredMixin, CreateView):
@@ -142,22 +117,5 @@ def paydetailsmpesa(request):
 
 
 
-@login_required
-def finalizepay(request):
-    userphones = Post.objects.filter(user=request.user).values_list('phonenumber', flat=True)
-    userphone = userphones[0]
-    updateduserphone = userphone[1:]
-    first = '254'
-    finalphoneno = first + updateduserphone
-    finalstuff = eval(finalphoneno)
-    qs = list(StatusPayment.objects.values_list('phoneno'))
-    for phoneno in qs:
-        print(phoneno)
-        print(finalstuff)
-        #print(finalphoneno)
-        if phoneno == finalstuff:
-            return HttpResponse('Payment received successfully!')
-        else:
-            return HttpResponse('they are NOT the samejnjj!')
 
 

@@ -3,26 +3,19 @@ from custom_user.models import User
 from django.urls import reverse
 
 # Create your models here.
-class StatusPayment(models.Model):
-    phoneno = models.TextField()
-    transcode = models.TextField()
-    class Meta:
-        verbose_name = 'Status Payment'
-        verbose_name_plural = 'Status Payments'
-    def __str__(self):
-        return self.phoneno
+
     
-
-class ContactDetails(models.Model):
+# Create your models here.
+class PaymentDetails(models.Model):
+    phonenumber = models.TextField()
+    transcode = models.TextField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    number = models.CharField(max_length=10)
-
     class Meta:
-        verbose_name = 'Contact Detail'
-        verbose_name_plural = 'Contact Details'
-
+        verbose_name = 'Payment Detail'
+        verbose_name_plural = 'Payment Details'
     def __str__(self):
-        return self.number
+        return self.phonenumber
+    
 
 
 

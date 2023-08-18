@@ -22,11 +22,7 @@ admin.site.register(models.UserSubmittedAnswer, UserSubmittedAnswerAdmin)
 
 
 
-class PaymentAdmin(admin.ModelAdmin):
-    list_display=['phoneno']
 
-
-admin.site.register(models.Payment, PaymentAdmin)
 
 admin.site.register(models.MyResults)
 

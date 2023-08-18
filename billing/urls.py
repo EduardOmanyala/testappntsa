@@ -1,6 +1,6 @@
 from django.urls import path
 from billing import views
-from billing.views import ContactsAddView, PostCreateView, PostDetailView, PostUpdateView
+from billing.views import PostCreateView, PostDetailView, PostUpdateView
 
 urlpatterns = [
     path('mpesa/request', views.mpesarequest, name='mpesastkrequest'),
@@ -11,8 +11,7 @@ urlpatterns = [
     path('pricing/standard', views.pricing_standard, name='pricing-standard'),
     path('pricing/institutes', views.pricing_corporate, name='pricing-institutes'),
     path('pricing', views.pricing, name='pricing'),
-    path('callback', views.callbackurl, name='callback'),
-    path('paymentnumber', ContactsAddView.as_view() ),
+    path('callback/<int:id>/', views.callbackurl, name='callback'),
     #path('paymentupdate/<int:pk>/', GeeksUpdateView.as_view() ),
     #path('contacts/<int:pk>/update/', ContactsUpdateView.as_view(), name='post-update'),
     #path('<pk>/contactsupdate/', views.band_update, name='contactsupdate'),
