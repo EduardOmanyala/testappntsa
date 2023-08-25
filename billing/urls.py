@@ -1,12 +1,15 @@
 from django.urls import path
 from billing import views
-from billing.views import PostCreateView, PostDetailView, PostUpdateView
+from billing.views import PostCreateView, PostDetailView, PostUpdateView, ContactCreateView, ContactDetailView, ContactUpdateView
 
 urlpatterns = [
     path('mpesa/request', views.mpesarequest, name='mpesastkrequest'),
     path('makeapayment', views.makeapayment, name='make-a-payment'),
+    path('processingpayment', views.processingpaymentpage, name='processing-payment'),
     path('checkpayment', views.finpayment, name='fin-pay'),
-    path('finalizepayment', views.paydetailsmpesa, name='paymentroute'),
+    path('payments/annual', views.yearlypayments, name='yearly-pay'),
+    path('finalizepayment/monthly', views.paydetailsmpesa, name='paymentroute'),
+    path('finalizepayment/annual', views.yearlypaydetailsmpesa, name='annualpayments'),
     #path('finalizepay', views.finalizepay, name='finish-pay'),
     path('pricing/standard', views.pricing_standard, name='pricing-standard'),
     path('pricing/institutes', views.pricing_corporate, name='pricing-institutes'),
@@ -18,4 +21,7 @@ urlpatterns = [
     path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
     path('post/new/', PostCreateView.as_view(), name='post-create'),
     path('post/<int:pk>/update/', PostUpdateView.as_view(), name='post-update'),
+    path('contact/<int:pk>/', ContactDetailView.as_view(), name='contact-detail'),
+    path('contact/new/', ContactCreateView.as_view(), name='contact-create'),
+    path('contact/<int:pk>/update/', ContactUpdateView.as_view(), name='contact-update'),
 ]

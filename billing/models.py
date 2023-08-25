@@ -29,6 +29,18 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('post-detail', kwargs={'pk': self.pk})
 
+class Contact(models.Model):
+    phonenumber = models.CharField(max_length=10)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.phonenumber
+
+    def get_absolute_url(self):
+        return reverse('contact-detail', kwargs={'pk': self.pk})
+
+
+
 class PaymentConfirm(models.Model):
     evaluate = models.CharField(max_length=3)
     user = models.ForeignKey(User, on_delete=models.CASCADE)

@@ -4,8 +4,9 @@ from django_daraja.mpesa.core import MpesaClient
 from django.views.decorators.csrf import csrf_exempt
 import json
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from billing.models import Post, PaymentDetails 
-from django.db.models import Max
+from billing.models import Post, PaymentDetails, Contact
+from django.contrib import messages
+#from django.db.models import Max
 from django.contrib.auth.decorators import login_required
 from custom_user.models import User
 
@@ -49,16 +50,6 @@ def callbackurl(request, id):
         return JsonResponse(dict(context))
     
 
-
-
-    
-
-
-    
-    
-
-  
- 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['phonenumber']
@@ -86,6 +77,32 @@ class PostDetailView(DetailView):
 
 
 
+class ContactCreateView(LoginRequiredMixin, CreateView):
+    model = Contact
+    fields = ['phonenumber']
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+    
+class ContactUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = Contact
+    fields = ['phonenumber']
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.user:
+            return True
+        return False
+    
+class ContactDetailView(DetailView):
+    model = Contact
+
+
 @login_required
 def makeapayment(request):
     return render(request, 'billing/makepayment.html')
@@ -110,10 +127,35 @@ def finpayment(request):
         blogs = Post.objects.filter(user=request.user).values_list('pk', flat=True)
         numpk = blogs[0]
         return render(request, 'billing/paydetailsconfirm.html', {'mydata':mydata, 'numpk':numpk})
+
+@login_required
+def yearlypayments(request):
+    mydata = Contact.objects.filter(user=request.user).order_by('-id')[:1]
+    if not mydata:
+        return redirect('contact-create')
+    else:
+        blogs = Contact.objects.filter(user=request.user).values_list('pk', flat=True)
+        numpk = blogs[0]
+        return render(request, 'billing/yearlypaydetailsconfirm.html', {'mydata':mydata, 'numpk':numpk})
     
 @login_required
 def paydetailsmpesa(request):
     return render(request, 'billing/paydetailsmpesa.html')
+
+@login_required
+def yearlypaydetailsmpesa(request):
+    return render(request, 'billing/yearlypaydetailsmpesa.html')
+
+@login_required
+def processingpaymentpage(request):
+    paydata = PaymentDetails.objects.filter(user=request.user)
+    if not paydata:
+        return render(request, 'billing/processingpaymentpage.html')
+    else:
+        messages.success(request, f'Payment completed successfully!')
+        return redirect('dashboard')
+    
+
 
 
 
