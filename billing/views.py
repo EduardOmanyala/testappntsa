@@ -44,7 +44,8 @@ def mpesarequest(request):
     transaction_desc = 'Description'
     callback_url = 'https://dltest.testprepken.com/billing/callback/{0}/'.format(user_id)
     response = cl.stk_push(phone_number, amount, account_reference, transaction_desc, callback_url)
-    return HttpResponse(response)
+    #return HttpResponse(response)
+    return redirect('processing-payment')
 
 # Include user pk on callback( request, pk), then create new model record with user pk
 @csrf_exempt
