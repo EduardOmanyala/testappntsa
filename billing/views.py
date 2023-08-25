@@ -42,7 +42,7 @@ def mpesarequest(request):
     amount = 1
     account_reference = 'reference'
     transaction_desc = 'Description'
-    callback_url = 'https://kpsea.testprepken.com/callback/{0}/'.format(user_id)
+    callback_url = 'https://dltest.testprepken.com/callback/{0}/'.format(user_id)
     response = cl.stk_push(phone_number, amount, account_reference, transaction_desc, callback_url)
     return HttpResponse(response)
 
