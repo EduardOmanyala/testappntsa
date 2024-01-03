@@ -1,0 +1,44 @@
+{% extends "core/base3.html" %}
+{% load static %}
+{% block content %}
+    <div class="results">
+        <div></div> 
+        <div>
+           
+            <h6 class="my-4 element-selector12">Revision Guide</h6>
+        <div class="card-body">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>User</th>
+                    <th>Date Paid</th>
+                    <th>Plan Type</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+                <tr>
+                    {% for row in mydata %}
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{row.user}}</td>
+                    <td >{{row.created_at}}</td>
+                    <td ><a class="button button-md button-default-outline-2 button-ujarak" href="{% url 'paydelete' row.id %}">Delete</a></td> 
+                </tr>
+                {% endfor %}
+            
+            </tbody>
+            </table>
+        </div>
+        </div> 
+        <div></div>
+    </div>
+   
+    
+
+
+
+
+
+    
+{% endblock content %}

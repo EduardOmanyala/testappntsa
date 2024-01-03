@@ -50,3 +50,14 @@ class PaymentConfirm(models.Model):
     def __str__(self):
         return self.evaluate
     
+
+class PaymentInfo(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    payment_status = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    class Meta:
+        verbose_name = 'Payment Info'
+        verbose_name_plural = 'Payment Infos'
+    def __str__(self):
+        return self.payment_status
+    

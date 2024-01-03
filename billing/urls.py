@@ -10,18 +10,30 @@ urlpatterns = [
     path('payments/annual', views.yearlypayments, name='yearly-pay'),
     path('finalizepayment/monthly', views.paydetailsmpesa, name='paymentroute'),
     path('finalizepayment/annual', views.yearlypaydetailsmpesa, name='annualpayments'),
-    #path('finalizepay', views.finalizepay, name='finish-pay'),
+    path('paymentsflutter', views.paymentflutter, name='payflutter'),
+    path('continue/payment', views.proceedToGateway, name='proceedtogateway'),
+    path('continue/payment/plan/two', views.proceedToGatewayannual, name='proceedtogatewayannual'),
+
+
+   
     path('pricing/standard', views.pricing_standard, name='pricing-standard'),
     path('pricing/institutes', views.pricing_corporate, name='pricing-institutes'),
     path('pricing', views.pricing, name='pricing'),
     path('callback/<int:id>/', views.callbackurl, name='callback'),
-    #path('paymentupdate/<int:pk>/', GeeksUpdateView.as_view() ),
-    #path('contacts/<int:pk>/update/', ContactsUpdateView.as_view(), name='post-update'),
-    #path('<pk>/contactsupdate/', views.band_update, name='contactsupdate'),
+    path('callbackflutter/<int:id>/', views.call_back_flutter, name='callbackflutter'),
+   
+
     path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
     path('post/new/', PostCreateView.as_view(), name='post-create'),
     path('post/<int:pk>/update/', PostUpdateView.as_view(), name='post-update'),
     path('contact/<int:pk>/', ContactDetailView.as_view(), name='contact-detail'),
     path('contact/new/', ContactCreateView.as_view(), name='contact-create'),
     path('contact/<int:pk>/update/', ContactUpdateView.as_view(), name='contact-update'),
+
+    path('payments/review', views.paymentsTracker, name='paytracker'),
+    path('payments/delete/<int:id>/', views.paymentsDelete, name='paydelete'),
+
+
+
+    
 ]

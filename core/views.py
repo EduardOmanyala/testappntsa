@@ -6,7 +6,7 @@ from django.core.mail import EmailMessage
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from billing.models import PaymentConfirm, PaymentDetails
+from billing.models import PaymentConfirm, PaymentDetails, PaymentInfo
 from . import models
 from core.models import QuizCategory, MyResults, QuizQuestion, UserSubmittedAnswer, Progress
 
@@ -62,7 +62,7 @@ def free_category_questions(request, cat_id):
 
 @login_required
 def category_questions(request, cat_id):
-    paydata = PaymentDetails.objects.filter(user=request.user)
+    paydata = PaymentInfo.objects.filter(user=request.user)
     if not paydata:
         return redirect('make-a-payment')
     else:
@@ -121,7 +121,7 @@ def profile(request):
 
 @login_required
 def dashboaord(request):
-    paydata = PaymentDetails.objects.filter(user=request.user)
+    paydata = PaymentInfo.objects.filter(user=request.user)
     test1 = MyResults.objects.filter(user=request.user, subject="Test One").order_by('-id')[:1]
     test2 = MyResults.objects.filter(user=request.user, subject="Test Two").order_by('-id')[:1]
     test3 = MyResults.objects.filter(user=request.user, subject="Test Three").order_by('-id')[:1]
@@ -146,5 +146,14 @@ def dashboaord(request):
                     'test9':test9,
                     'test10':test10
                     })
+
+
+
+def about(request):
+    return render(request, 'core/about.html')
+
+def contactus(request):
+    return render(request, 'core/contactus.html')
+
 
 

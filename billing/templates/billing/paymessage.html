@@ -1,0 +1,21 @@
+{% extends "core/base3.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid" style="background: linear-gradient(109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1%);">
+  <div class="billingdispcol">
+  <div></div>
+  <div>
+  <br>
+    <img src="{% static 'core/images4/paysuccess.jpg' %}" alt="" width="368" height="420"/>
+    <br><br>
+    <p>We have successfully received your payment and have updated your account accordingly. Return to dashboard to access new content. Thanks for using our platform. </p>
+    <a class="button button-md button-default-outline-2 button-ujarak" href="{% url 'dashboard' %}">Return to Dashboard</a>
+  
+  <br> <br> <br> <br> <br>
+  
+  
+  </div>
+    <div></div>
+  </div>    
+  </div>
+{% endblock %}

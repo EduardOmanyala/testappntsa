@@ -22,11 +22,12 @@
 
 .plan-selector12 {
     background-color: white;
-    margin-left: 4%;
-    margin-right: 4%;
-    width: 90%;
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 80%;
     margin-top: 8%;
     margin-bottom: 8%;
+    border-radius: 12px;
 }
 
 
@@ -38,12 +39,14 @@
 .plan-selector12 p {
     padding-left: 5%;
     padding-right: 5%;
+
 }
 
 .btn2 {
     margin-left: 2.5%;
     margin-right: 2.5%;
     width: 95%;
+    border-radius: 12px;
 }
 
 .btn3 {
@@ -67,7 +70,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    border: 2px solid black;
+    border: 2px solid #01b3a7;
 
     
 }
@@ -134,4 +137,33 @@
 .paymentlayout {
     display: grid;
     grid-template-columns: 17% 66% 17%;
+}
+
+.question-context {
+    display: grid;
+    grid-template-columns: 17% 66% 17%;
+}
+
+.subjectdisp {
+    grid-template-rows: auto;
+}
+
+.dispnon101 {
+    display: none;
+}
+
+.payment-options123 {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.payment-options-rows {
+    height: 2rem;
+    border-bottom: 1px solid grey;
+    background-color: lavender;
+}
+
+.invoice-total12 {
+    display: grid;
+    grid-template-columns: 60% 40%;
 }

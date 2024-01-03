@@ -8,6 +8,7 @@ from billing.models import Post, PaymentDetails, Contact
 from django.contrib import messages
 #from django.db.models import Max
 from django.contrib.auth.decorators import login_required
+from billing.models import Post, Contact, PaymentInfo
 from custom_user.models import User
 
 from django.views.generic import (
@@ -18,6 +19,27 @@ from django.views.generic import (
     DeleteView
 )
 # Create your views here.
+
+@login_required
+def paymentflutter(request):
+    user_id = request.user.id
+    user_email = request.user.email
+    user_name = request.user.first_name
+    mydata = Post.objects.filter(user=request.user).order_by('-id')[:1]
+    phone_number = mydata[0]
+    callback_url = 'https://kpsea.testprepken.com/billing/callback/{0}/'.format(user_id)
+    return render(request, 'billing/flutterpay.html', {'user_id':user_id, 'user_name':user_name, 'user_email':user_email, 'phone_number':phone_number, 'callback_url':callback_url})
+
+
+def call_back_flutter(request, id):
+    user_id = User.objects.get(id=id)
+    payment = PaymentInfo(
+            user=user_id,
+            payment_status='paid',
+        )
+    payment.save()
+    return render(request, 'billing/paymessage.html')
+
 
 
 # def mpesarequest(request):
@@ -147,11 +169,11 @@ def finpayment(request):
 
 @login_required
 def yearlypayments(request):
-    mydata = Contact.objects.filter(user=request.user).order_by('-id')[:1]
+    mydata = Post.objects.filter(user=request.user).order_by('-id')[:1]
     if not mydata:
         return redirect('contact-create')
     else:
-        blogs = Contact.objects.filter(user=request.user).values_list('pk', flat=True)
+        blogs = Post.objects.filter(user=request.user).values_list('pk', flat=True)
         numpk = blogs[0]
         return render(request, 'billing/yearlypaydetailsconfirm.html', {'mydata':mydata, 'numpk':numpk})
     
@@ -172,6 +194,42 @@ def processingpaymentpage(request):
         messages.success(request, f'Payment completed successfully!')
         return redirect('dashboard')
     
+
+
+@login_required
+def proceedToGateway(request):
+    user_id = request.user.id
+    user_email = request.user.email
+    user_name = request.user.first_name
+    mydata = Post.objects.filter(user=request.user).order_by('-id')[:1]
+    phone_number = mydata[0]
+    callback_url = 'https://dltest.testprepken.com/billing/callback/{0}/'.format(user_id)
+    return render(request, 'billing/proceedToGateway.html', {'user_id':user_id, 'user_name':user_name, 'user_email':user_email, 'phone_number':phone_number, 'callback_url':callback_url})
+
+
+
+@login_required
+def proceedToGatewayannual(request):
+    user_id = request.user.id
+    user_email = request.user.email
+    user_name = request.user.first_name
+    mydata = Post.objects.filter(user=request.user).order_by('-id')[:1]
+    phone_number = mydata[0]
+    callback_url = 'https://dltest.testprepken.com/billing/callback/{0}/'.format(user_id)
+    return render(request, 'billing/proceedToGatewayannual.html', {'user_id':user_id, 'user_name':user_name, 'user_email':user_email, 'phone_number':phone_number, 'callback_url':callback_url})
+
+@login_required
+def paymentsTracker(request):
+    if request.user.is_superuser:
+        mydata = PaymentInfo.objects.all()
+        return render(request, 'billing/paymentsTracker.html', {'mydata':mydata})
+    else:
+        return redirect('dashboard')
+
+def paymentsDelete(request, id):
+    PaymentInfo.objects.filter(id=id).delete()
+    return redirect('paytracker')
+
 
 
 

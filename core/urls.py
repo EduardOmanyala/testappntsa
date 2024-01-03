@@ -18,6 +18,8 @@ urlpatterns = [
     path('free-category-questions/<int:cat_id>', core_views.free_category_questions, name='free-category-questions'),
     path('submit-answer/<int:cat_id>/<int:quest_id>', core_views.submit_answer, name='submit-answer'),
     path('profile', core_views.profile, name='profile'),
+    path('about', core_views.about, name='about'),
+    path('contactus', core_views.contactus, name='contactus'),
 ]
 
 

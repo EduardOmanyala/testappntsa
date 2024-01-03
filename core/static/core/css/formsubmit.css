@@ -128,3 +128,16 @@
     display: flex;
     justify-content: center;
 }
+
+.question-context {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+
+}
+
+
+@media screen and (max-width: 800px) {
+    .question-context {
+        grid-template-columns: 100%;
+    }
+}
