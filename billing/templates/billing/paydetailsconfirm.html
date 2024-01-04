@@ -6,7 +6,9 @@
   <div></div>
   <div>
       <div class="plan-selector12">
-        <img src="{% static 'core/images3/mpesa.jpg' %}" alt="" />
+        
+        
+<br><br>
         
         <h6>Phone Number on Record:</h6>
         <br>
@@ -16,13 +18,13 @@
             <br>
             <h6> Please continue if this is still your number </h6>
             <br>
-            <button type="button" onclick="location.href='{% url 'paymentroute' %}'" class="btn3 btn btn-primary btn-lg">Continue</button>
+            <button type="button" onclick="location.href='{% url 'proceedtogateway' %}'" class="btn3 btn btn-primary btn-lg">Continue</button>
 
           <br><br>
           <h6> or enter a new number here </h6>
            <br>
             <button type="button" onclick="location.href='{% url 'post-update' numpk %}'" class="btn3 btn btn-primary btn-lg">Change Number</button>
-            <br><br><br>
+            <br><br><br><br><br>
       </div>
    
   </div>
