@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from billing.models import PaymentConfirm, PaymentDetails, PaymentInfo
 from . import models
+from usermanager.models import EmailVerification
 from core.models import QuizCategory, MyResults, QuizQuestion, UserSubmittedAnswer, Progress
 
 
@@ -28,10 +29,10 @@ def register(request):
             form.save()
             email = form.cleaned_data.get('email')
             messages.success(request, f'Account Created for {email}, you can now login')
-            html_template = 'core/successemail.html'
+            html_template = 'core/welcomemail.html'
             html_message = render_to_string(html_template)
-            subject = 'Welcome to Testapp!'
-            email_from = settings.EMAIL_HOST_USER
+            subject = 'Welcome to Testprep!'
+            email_from = 'testprep@testprepken.com'
             recipient_list = [email]
             message = EmailMessage(subject, html_message,
                                    email_from, recipient_list)
@@ -121,6 +122,7 @@ def profile(request):
 
 @login_required
 def dashboaord(request):
+    datum = EmailVerification.objects.filter(user=request.user)
     paydata = PaymentInfo.objects.filter(user=request.user)
     test1 = MyResults.objects.filter(user=request.user, subject="Test One").order_by('-id')[:1]
     test2 = MyResults.objects.filter(user=request.user, subject="Test Two").order_by('-id')[:1]
@@ -134,7 +136,8 @@ def dashboaord(request):
     test10 = MyResults.objects.filter(user=request.user, subject="Test Ten").order_by('-id')[:1]
     return render(request, 
                   'core/newdashboard.html',
-                   {'paydata':paydata,
+                   {'datum': datum,
+                    'paydata':paydata,
                     'test1':test1,
                     'test2':test2,
                     'test3':test3,
@@ -147,6 +150,10 @@ def dashboaord(request):
                     'test10':test10
                     })
 
+@login_required
+def stoptest(request):
+    UserSubmittedAnswer.objects.filter(user=request.user).delete()
+    return redirect('dashboard')
 
 
 def about(request):
@@ -154,6 +161,9 @@ def about(request):
 
 def contactus(request):
     return render(request, 'core/contactus.html')
+
+def welcomemail(request):
+    return render(request, 'core/welcomemail.html')
 
 
 

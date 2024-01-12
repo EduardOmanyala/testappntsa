@@ -1,21 +1,15 @@
 {% extends "core/base3.html" %}
 {% load static %}
 {% block content %}
-{% if not paydata%}
-<div>
-    <h6 class="joinbanner" style="background: linear-gradient(109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );">Gain Access to Hundreds of Test Questions!&nbsp;&nbsp;&nbsp; <a href="{% url 'pricing' %}">Join Now</a></h6> 
-</div>
-{% endif %}
-<div>
-    <h6 class="joinbanner" style="background: linear-gradient(109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );">Test Categories</h6>  
-</div>
-
-
-
 
 <div class="mydashboardgridmain">
     <div></div>
     <div>
+      {% if not datum %}
+<div class="alert alert-primary" role="alert">
+  Verify your Email <a href="{% url 'verifyemail' %}" class="alert-link">Using this Link</a>. Check your inbox for more details.
+</div>
+{% endif %}
 
        <!-- dashboard two coulum grid -->
        <div class="mydashitems">

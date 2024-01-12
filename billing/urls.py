@@ -15,12 +15,20 @@ urlpatterns = [
     path('continue/payment/plan/two', views.proceedToGatewayannual, name='proceedtogatewayannual'),
 
 
+    path('continue/payment/$2y$10$IGjMbP04ElJDfw/cYqT9ucQUEJeLSiDX62DaWIhFb/ILsudohviG/', views.proceedToGatewaypaystack, name='paystack'),
+    path('continue/payment/$2y$10$1jpYA/6EGOBAejusJh0b5OwcJ78M72SlM9PNsXAz1e7xc6gL1rSC/', views.proceedToGatewaypaystackannual, name='paystackannual'),
+
+
+
+
    
     path('pricing/standard', views.pricing_standard, name='pricing-standard'),
     path('pricing/institutes', views.pricing_corporate, name='pricing-institutes'),
     path('pricing', views.pricing, name='pricing'),
     path('callback/<int:id>/', views.callbackurl, name='callback'),
     path('callbackflutter/<int:id>/', views.call_back_flutter, name='callbackflutter'),
+    path('payment_review/$2y$10$g/H75NWQ4eS/<int:id>/t3x6Jlf6fFYUptfxRsdyttm8iHjWkQU/rvyQ5CHYC/', views.call_back_flutter, name='callbackflutter'),
+    path('payment_review/$2y$10$g/H75NWJ4eS/<int:id>/t3x6Jlf6fFYUtriidyttm8iHjWkQDPT/rvyQ5CHYC/', views.call_back_annual, name='callbackannual'),
    
 
     path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),

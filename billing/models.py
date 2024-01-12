@@ -61,3 +61,15 @@ class PaymentInfo(models.Model):
     def __str__(self):
         return self.payment_status
     
+
+
+
+class SubscriptionData(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    payment_status = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    class Meta:
+        verbose_name = 'Subscription Data'
+        verbose_name_plural = 'Subscription Data'
+    def __str__(self):
+        return self.payment_status

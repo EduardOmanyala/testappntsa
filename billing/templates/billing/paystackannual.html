@@ -1,0 +1,83 @@
+{% extends "core/base3.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid" style="background: linear-gradient(109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1%);">
+  <div class="billingdispcol">
+  <div></div>
+  <div>
+      <div class="plan-selector12">
+        <br>
+        <table style="border: 1px solid black;border-left: 0px solid; border-right: 0px solid; width:100%;">
+            <tr>
+                <th style="border: 0px solid black; border-left: 0px solid; border-right: 0px solid;height: 2.5rem;">Item</th>
+                <th style="border: 0px solid black;">Total</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black;border-left: 0px solid; border-right: 0px solid;height: 2.5rem;">Study Guide</td>
+                <td style="border: 1px solid black;border-left: 0px solid; border-right: 0px solid">KES 2,520</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; border-left: 0px solid; border-right: 0px solid;height: 2.5rem;">VAT</td>
+                <td style="border: 1px solid black; border-left: 0px solid; border-right: 0px solid">KES 480</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; border-left: 0px solid; border-right: 0px solid;height: 2.5rem;">Total</td>
+                <td style="border: 1px solid black; border-left: 0px solid; border-right: 0px solid">KES 3,000</td>
+            </tr>
+        </table>
+        <br>
+        <div class="invoice-total12">
+            <div> </div>
+            <div></div>
+        </div>
+
+        <br> <br><br>
+
+        <button type="button" onclick="payWithPaystack()" class="btn3 btn btn-primary btn-lg">Make Payment</button>
+        <script src="https://js.paystack.co/v1/inline.js"></script>
+<script>
+    let cust_contact = "{{user_email}}"
+    let cust_name = "{{user_name}}"
+    let red_url = "{{callback_url}}"
+    
+
+function payWithPaystack() {
+ 
+  var handler = PaystackPop.setup({
+    key: 'pk_live_95627853e9ee27894bf46f265f7b386ccae5793e', // Replace with your public key
+    email: cust_contact,
+    amount: 300000,
+    //ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+    // label: "Optional string that replaces customer email"
+    currency: 'KES',
+    onClose: function(){
+      alert('Window closed.');
+    },
+    callback: function(response){
+      //let message = 'Payment complete! Reference: ' + response.reference;
+      //alert(message);
+      window.location.href = red_url;
+    }
+  });
+
+  handler.openIframe();
+}
+
+</script>
+
+
+        <br><br> <br><br> <br><br>
+       
+           
+           
+      </div>
+      <br><br>
+   
+  </div>
+    <div></div>
+  </div>    
+  </div>
+
+  
+
+{% endblock %}

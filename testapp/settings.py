@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django_use_email_as_username.apps.DjangoUseEmailAsUsernameConfig',
     'custom_user.apps.CustomUserConfig',
     'core',
+    'usermanager',
     'crispy_forms',
     'crispy_bootstrap4',
     'django_daraja',

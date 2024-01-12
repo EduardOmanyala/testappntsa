@@ -14,12 +14,14 @@ urlpatterns = [
     path('reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(template_name="core/password_reset_done.html"), name='password_reset_complete'),
     path('dashboard', core_views.dashboaord, name='dashboard'),
     #path('newdashboard', core_views.newdashboaord, name='new-dashboard'),
+    path('stop/test', core_views.stoptest, name='stop-test'),
     path('categories-questions/<int:cat_id>', core_views.category_questions, name='category-questions'),
     path('free-category-questions/<int:cat_id>', core_views.free_category_questions, name='free-category-questions'),
     path('submit-answer/<int:cat_id>/<int:quest_id>', core_views.submit_answer, name='submit-answer'),
     path('profile', core_views.profile, name='profile'),
     path('about', core_views.about, name='about'),
     path('contactus', core_views.contactus, name='contactus'),
+     path('welcomemail', core_views.welcomemail, name='welcomemail'),
 ]
 
 

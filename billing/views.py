@@ -8,7 +8,7 @@ from billing.models import Post, PaymentDetails, Contact
 from django.contrib import messages
 #from django.db.models import Max
 from django.contrib.auth.decorators import login_required
-from billing.models import Post, Contact, PaymentInfo
+from billing.models import Post, Contact, PaymentInfo, SubscriptionData
 from custom_user.models import User
 
 from django.views.generic import (
@@ -30,16 +30,34 @@ def paymentflutter(request):
     callback_url = 'https://kpsea.testprepken.com/billing/callback/{0}/'.format(user_id)
     return render(request, 'billing/flutterpay.html', {'user_id':user_id, 'user_name':user_name, 'user_email':user_email, 'phone_number':phone_number, 'callback_url':callback_url})
 
-
 def call_back_flutter(request, id):
     user_id = User.objects.get(id=id)
     payment = PaymentInfo(
             user=user_id,
-            payment_status='paid',
+            payment_status='300',
         )
     payment.save()
+    datum = SubscriptionData(
+            user=user_id,
+            payment_status='300',
+    )
+    datum.save()
     return render(request, 'billing/paymessage.html')
 
+
+def call_back_annual(request, id):
+    user_id = User.objects.get(id=id)
+    payment = PaymentInfo(
+            user=user_id,
+            payment_status='3000',
+        )
+    payment.save()
+    datum = SubscriptionData(
+            user=user_id,
+            payment_status='3000',
+    )
+    datum.save()
+    return render(request, 'billing/paymessage.html')
 
 
 # def mpesarequest(request):
@@ -230,6 +248,31 @@ def paymentsDelete(request, id):
     PaymentInfo.objects.filter(id=id).delete()
     return redirect('paytracker')
 
+
+
+@login_required
+def proceedToGatewaypaystack(request):
+    user_id = request.user.id
+    user_email = request.user.email
+    user_name = request.user.first_name
+    #mydata = Post.objects.filter(user=request.user).order_by('-id')[:1]
+    #phone_number = mydata[0]
+    callback_url = 'https://dltest.testprepken.com/billing/payment_review/$2y$10$g/H75NWQ4eS/{0}/t3x6Jlf6fFYUptfxRsdyttm8iHjWkQU/rvyQ5CHYC/'.format(user_id)
+    return render(request, 'billing/paystack.html', {'user_id':user_id, 'user_name':user_name, 'user_email':user_email, 'callback_url':callback_url})
+    
+
+
+
+@login_required
+def proceedToGatewaypaystackannual(request):
+    user_id = request.user.id
+    user_email = request.user.email
+    user_name = request.user.first_name
+    #mydata = Post.objects.filter(user=request.user).order_by('-id')[:1]
+    #phone_number = mydata[0]
+    callback_url = 'https://dltest.testprepken.com/billing/payment_review/$2y$10$g/H75NWJ4eS/{0}/t3x6Jlf6fFYUtriidyttm8iHjWkQDPT/rvyQ5CHYC/'.format(user_id)
+    return render(request, 'billing/paystackannual.html', {'user_id':user_id, 'user_name':user_name, 'user_email':user_email, 'callback_url':callback_url})
+    
 
 
 
