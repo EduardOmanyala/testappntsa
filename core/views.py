@@ -32,7 +32,7 @@ def register(request):
             html_template = 'core/welcomemail.html'
             html_message = render_to_string(html_template)
             subject = 'Welcome to Testprep!'
-            email_from = 'testprep@testprepken.com'
+            email_from = 'Testprep@testprepken.com'
             recipient_list = [email]
             message = EmailMessage(subject, html_message,
                                    email_from, recipient_list)

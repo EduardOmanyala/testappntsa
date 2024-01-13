@@ -15,12 +15,12 @@ def verifyEmail(request):
         user_email = request.user.email
         user_name = request.user.first_name
         verify_url = 'http://127.0.0.1:8000/confirm/verify_email/iLdxMr8pCW0p57u0/68yhz2uu/{0}/$2y$10$Oixfkm5gRoCjlmHRgDVB5Z0T2RQ/'.format(user_id)
-        email = 'bestessays001@gmail.com'
+        #email = 'bestessays001@gmail.com'
         html_template = 'usermanager/verify_mail.html'
         html_message = render_to_string(html_template, {'verify_url': verify_url, 'user_name': user_name})
         subject = 'Verify your Email'
         email_from = 'Testprep@testprepken.com'
-        recipient_list = [email]
+        recipient_list = [user_email]
         message = EmailMessage(subject, html_message,
                             email_from, recipient_list)
         message.content_subtype = 'html'
